@@ -6,8 +6,11 @@ percentile = 80
 
 # Calculate the position i for the 80th percentile
 n = len(data)
-i = (percentile / 100) * (n + 1)
+i = ((percentile / 100) * (n)) + 1
 
 # Show calculated index for the 80th percentile
 
 print(i)
+
+# Formula from the "online notes" is i + 1 apparently.
+# So, answer is not 2499 but 2540! 
