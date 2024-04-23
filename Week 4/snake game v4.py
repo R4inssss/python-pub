@@ -15,7 +15,7 @@ snake_pos = [(300, 250)]  # initial position and length
 direction = 'STOP'  # onitial direction
 # food setup
 food_color = (255, 0, 0)  # swapped to make it an apple
-food_size = 50  # try 500, ^^ food size
+food_size = 500  # try 500, ^^ food size
 food_pos = [random.randrange(0, SCREEN_WIDTH // food_size) * food_size,
             random.randrange(0, SCREEN_HEIGHT // food_size) * food_size]
 # Same as before; nothing changed here
@@ -38,14 +38,17 @@ def move_snake():
     # hydra
     snake_pos.insert(0, new_head)
     # Check if snake has eaten food
-    if snake_pos[0] == food_pos:
+
+    if (food_pos[0] <= snake_pos[0][0] <= food_pos[0] + food_size and
+        food_pos[1] <= snake_pos[0][1] <= food_pos[1] + food_size):
         food_pos = [random.randrange(0, SCREEN_WIDTH // food_size) * food_size,
                     random.randrange(0, SCREEN_HEIGHT // food_size) * food_size]
+
+
+
     else:
         snake_pos.pop()  # Remove the last segment
  # removed return statement in account to new global variable
-
-
 
 
 run = True
@@ -103,3 +106,6 @@ pygame.quit()
 # Added checks for move_snake()
 # Spell checks
 # Green Snake Red Apple
+# Change line 40 - 43
+# Changed the checks: checked for x and y cooodrinate of both snakehead and food
+# moved food_pos so that if it does, it means snake ate food and there's new food
