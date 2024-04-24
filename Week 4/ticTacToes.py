@@ -49,7 +49,7 @@ printBoard(theBoard)
 # call the function printBoard with the parameter of theBoard
 # again, theBoard acts as the dictionary 
 # then it prins out turn, where turn is equal to x or o depending on if x == true
-# then we ask for the input (x or o).
+# then we ask for the input (ie- mid-M). 
 # we iterate the input to the dictionary, where if the correct key was used
 # then it inputs it into the spot as a value
 # proceeding to the next turn.
