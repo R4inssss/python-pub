@@ -27,4 +27,4 @@ cv = (s/mean) * 100
 print(f'The sample standard deviation is: {s}')
 print(f'This is your mean: {mean}')
 print(f'This is your n: {n}')
-print(f'This is your coefficient variable: {cv}%')
+print(f'This is your coefficient variation: {cv}%')
