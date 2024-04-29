@@ -18,7 +18,7 @@ square = sum((x - mean) ** 2 for x in data)
 # N = length of data
 N = len(data)
 # population standard deviation
-m = (square / (N - 1)) ** 0.5
+m = (square / (N)) ** 0.5
 
 print(f'The population standard deviation is: {m}')
 print(f'This is your mean: {mean}')
