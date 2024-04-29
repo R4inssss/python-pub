@@ -22,4 +22,6 @@ m = (square / (N)) ** 0.5
 
 print(f'The population standard deviation is: {m}')
 print(f'This is your mean: {mean}')
-print(f'This is your n: {m}')
+print(f'This is your n: {N}')
+
+# copy pasting code teehee
