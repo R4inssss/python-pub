@@ -20,7 +20,7 @@ class Solution(object):
         for i in range(length):
             if flowerbed[i] == 0:
                 empty_l = (i == 0 or flowerbed[i - 1] == 0)
-                empty_r = (i == 0 or flowerbed[i + 1] == 0)
+                empty_r = (i == length - 1 or flowerbed[i + 1] == 0)
                 # we need a way to iterate our range of values. our goal here is to check the adjacent pots,
                 # or the values to the left and right of the list
                 # knowing this, we then iterate through our flowerbeds,
