@@ -17,11 +17,13 @@ class statisticS:
             '7': stdError,
             '8': populationStdDeviation,
             '9': stdIndividual,
-            '10': Marginoferror
+            '10': Marginoferror,
+            '11': cdf_solver
         }
         print('''Choose an option:\n1 = One boundary\n2 = Find area for k
 3 = Two boundaries\n4 = Z-score CDF\n5 = CV/STD given set\n6 = Mean Z calculation
-7 = std error aka sigma subset mean\n8 = std deviation\n9 = distribution of individuals\n10 = margin of error''')
+7 = std error aka sigma subset mean\n8 = std deviation\n9 = distribution of individuals\n10 = margin of error
+11 = cumulative distribution of individuals\n''')
 
         choice = input(">>> ")
         if choice in options:
@@ -169,6 +171,16 @@ class Marginoferror:
         z, s, n = map(float, input('>>> ').split())
         moe = z * s/math.sqrt(n)
         print(f'Your margin of error is: {moe}')
+
+# 11 cdf solver
+class cdf_solver:
+    def __init__(self):
+        print('cdf solver v1')
+        print('Give x, m, and s')
+        x, m, s = map(float, input('>>> ').split())
+        answer = ((x - m)/s)
+        response = norm.cdf(answer)
+        print(f'This is your cdf: {response}')
 
 
 if __name__ == '__main__':
