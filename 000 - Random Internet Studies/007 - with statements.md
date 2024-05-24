@@ -15,8 +15,9 @@ open takes up to 3 parameters, the filename, the mode, and the encoding which we
 The [[with]] statement!
 The `with` statement works with the `open()` function to open a file.
 And closes it as well!
+
 ```python
-with open("hello.txt") as my_file:
+with open("../Week 8/hello.txt") as my_file:
     print(my_file.read())
 
 # Output : 
