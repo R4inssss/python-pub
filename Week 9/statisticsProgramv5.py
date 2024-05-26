@@ -1,6 +1,5 @@
 # Statistics Program v.5
-
-from scipy.stats import norm
+import scipy.stats as stats
 import sys
 import math
 
@@ -19,7 +18,8 @@ class Statistics:
             '8': POPSTDDeviation,
             '9': STDIndividual,
             '10': MarginofError,
-            '11': CDFSolver
+            '11': CDFSolver,
+            '12': StudentTDistribution
         }
         print('''Choose an option:
 1 = One boundary
@@ -33,6 +33,7 @@ class Statistics:
 9 = distribution of individuals
 10 = margin of error
 11 = cumulative distribution of individuals
+12 = Student T-distribution
 ''')
 
         choice = input(">>> ")
@@ -49,7 +50,7 @@ class OneBoundaries:
         print('Mean | Sigma | Z1 | Sample Size')
         mean, sigma, z1, sample_size = map(float, input('>>> ').split())
         z = (z1 - mean) / sigma
-        probability = norm.cdf(z)
+        probability = stats.norm.cdf(z)
         estimated_count = probability * sample_size
         variable_rounded = round(estimated_count)
         print(f'Variable rounded: {variable_rounded}')
@@ -64,7 +65,7 @@ class Area:
         try:
             area = float(area)
             # using.ppf method to find the k_value
-            k_value = norm.ppf(area)
+            k_value = stats.norm.ppf(area)
             k_value_positive = abs(k_value)
             print(f'k value: {k_value}')
             print(f'k value_positive: {k_value_positive}')
@@ -78,8 +79,8 @@ class TwoBoundaries:
         print('what are the boundaries lower, upper')
         z_lower, z_upper = map(float, input('>>> ').split())
         # probability using cdf method
-        lower = norm.cdf(z_lower)
-        upper = norm.cdf(z_upper)
+        lower = stats.norm.cdf(z_lower)
+        upper = stats.norm.cdf(z_upper)
         if lower > upper:
             print('Lower number first, then upper')
         else:
@@ -92,8 +93,8 @@ class CalculateZ:
     def __init__(self):
         print('What are the zscores? lower, upper')
         z_lower, z_upper = map(float, input('>>> ').split())
-        lower = norm.cdf(z_lower)
-        upper = norm.cdf(z_upper)
+        lower = stats.norm.cdf(z_lower)
+        upper = stats.norm.cdf(z_upper)
         print(f'This is your lower: {lower}.')
         print(f'This is your upper: {upper}')
 
@@ -133,8 +134,8 @@ class MeanZ:
         lower_range, upper_range = map(float, input('>>> ').split())
         z_lower = (lower_range - self.mu) / self.std
         z_upper = (upper_range - self.mu) / self.std
-        prob_lower = norm.cdf(z_lower)
-        prob_upper = norm.cdf(z_upper)
+        prob_lower = stats.norm.cdf(z_lower)
+        prob_upper = stats.norm.cdf(z_upper)
         probability = prob_upper - prob_lower
         print(f"Z-score for lower range {lower_range}: {z_lower:.4f}")
         print(f"Z-score for upper range {upper_range}: {z_upper:.4f}")
@@ -173,7 +174,7 @@ class STDIndividual:
         print('Mean | X | sigma | Sample Size')
         mean, x, sigma, sample_size = map(float, input('>>> ').split())
         z = (x - mean) / sigma
-        probability = norm.cdf(z)
+        probability = stats.norm.cdf(z)
         estimated_count = (1 - probability) * sample_size
         variable_rounded = round(estimated_count)
         print(f'Variable (i.e children) given {x} hours: {variable_rounded}')
@@ -197,8 +198,24 @@ class CDFSolver:
         print('Give x, m, and s')
         x, m, s = map(float, input('>>> ').split())
         answer = ((x - m) / s)
-        response = norm.cdf(answer)
+        response = stats.norm.cdf(answer)
         print(f'This is your cdf: {response}')
+
+
+# 12, student t distribution
+class StudentTDistribution:
+    def __init__(self):
+        print('Enter c (confidence level) and n (sample size):')
+        conf, n = map(float, input('>>> ').split())
+        df = n - 1
+        t = self.calc_t(conf, df)
+        print(f'Here is your t-distribution critical value: {t:.4f}')
+        print(f'Here is your degrees of freedom: {df}')
+
+    def calc_t(self, confidence, dof):
+        alpha = (1 + confidence) / 2
+        t = stats.t.ppf(alpha, dof)
+        return t
 
 
 if __name__ == '__main__':
