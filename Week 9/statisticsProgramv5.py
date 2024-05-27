@@ -19,7 +19,8 @@ class Statistics:
             '9': STDIndividual,
             '10': MarginofError,
             '11': CDFSolver,
-            '12': StudentTDistribution
+            '12': StudentTDistribution,
+            '13': ConfidenceIntervalDataSet
         }
         print('''Choose an option:
 1 = One boundary
@@ -34,6 +35,8 @@ class Statistics:
 10 = margin of error
 11 = cumulative distribution of individuals
 12 = Student T-distribution
+13 = confidence interval given a data set
+14 = confidence interval non data set ** Work in progress
 ''')
 
         choice = input(">>> ")
@@ -113,7 +116,9 @@ class CV:
         cv = (s / mean) * 100
         mini = min(data)
         maxi = max(data)
+        data_sorted = sorted(data)
         range_value = maxi - mini
+        print(f'Your sorted data: {data_sorted}')
         print(f'The sample standard deviation is: {s}')
         print(f'The sample variance is: {s2}')
         print(f'This is your range {range_value}')
@@ -211,6 +216,46 @@ class StudentTDistribution:
         t = self.calc_t(conf, df)
         print(f'Here is your t-distribution critical value: {t:.4f}')
         print(f'Here is your degrees of freedom: {df}')
+
+    def calc_t(self, confidence, dof):
+        alpha = (1 + confidence) / 2
+        t = stats.t.ppf(alpha, dof)
+        return t
+
+
+class ConfidenceIntervalDataSet:
+    def __init__(self):
+        print('What is the data? (given a data set)')
+        data = input('>>> ')
+        data = [float(x) for x in data.split()]
+        mean = sum(data) / len(data)
+        square = sum((x - mean) ** 2 for x in data)
+        n = len(data)
+        s = (square / (n - 1)) ** 0.5
+        s2 = (square / (n - 1))
+        cv = (s / mean) * 100
+        mini = min(data)
+        maxi = max(data)
+        range_value = maxi - mini
+        printing_data = sorted(data)
+        print(f'Here is your data{printing_data}')
+        print(f'The sample standard deviation is: {s}')
+        print(f'The sample variance is: {s2}')
+        print(f'This is your range {range_value}')
+        print(f'This is your mean: {mean}')
+        print(f'This is your n: {n}')
+        print(f'This is your coefficient variation: {cv}%')
+        print('Enter c (confidence level):')
+        conf = float(input())
+        df = n - 1
+        t = self.calc_t(conf, df)
+        e = (t * (s / math.sqrt(n)))
+        el = e - mean
+        eu = e + mean
+        print(f'Here is your t-distribution critical value: {t:.4f}')
+        print(f'Here is your degrees of freedom: {df}')
+        print(f'Here is your E: {e:4f}')
+        print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
 
     def calc_t(self, confidence, dof):
         alpha = (1 + confidence) / 2
