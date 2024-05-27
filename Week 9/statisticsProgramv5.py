@@ -20,7 +20,8 @@ class Statistics:
             '10': MarginofError,
             '11': CDFSolver,
             '12': StudentTDistribution,
-            '13': ConfidenceIntervalDataSet
+            '13': ConfidenceIntervalDataSet,
+            '14': ConfidenceIntervalNoSet
         }
         print('''Choose an option:
 1 = One boundary
@@ -36,7 +37,7 @@ class Statistics:
 11 = cumulative distribution of individuals
 12 = Student T-distribution
 13 = confidence interval given a data set
-14 = confidence interval non data set ** Work in progress
+14 = confidence interval non data set
 ''')
 
         choice = input(">>> ")
@@ -254,8 +255,40 @@ class ConfidenceIntervalDataSet:
         df = n if sigma_known else n - 1
         t = self.calc_t(conf, df)
         e = (t * (s / math.sqrt(n)))
-        el = e - mean
-        eu = e + mean
+        el = mean - e
+        eu = mean + e
+        print(f'Here is your t-distribution critical value: {t:.4f}')
+        print(f'Here is your degrees of freedom: {df}')
+        print(f'Here is your E: {e:4f}')
+        print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
+
+    def calc_t(self, confidence, dof):
+        alpha = (1 + confidence) / 2
+        t = stats.t.ppf(alpha, dof)
+        return t
+
+
+# 14, c-interval no data set
+class ConfidenceIntervalNoSet:
+    def __init__(self):
+        print('What is the data? mean, c level, n, ')
+        mean, conf, n = map(float, input('>>> ').split())
+        print('Is sigma known? (yes/no)')
+        sigma_known = input().strip().lower() == 'yes'
+        if sigma_known:
+            print('What is the sigma?')
+            sigma = float(input('>>> '))
+            s = sigma
+            df = n
+        else:
+            print('Enter the sample deviation.')
+            s = float(input('>>> '))
+            df = n - 1
+
+        t = self.calc_t(conf, df)
+        e = (t * (s / math.sqrt(n)))
+        el = mean - e
+        eu = mean + e
         print(f'Here is your t-distribution critical value: {t:.4f}')
         print(f'Here is your degrees of freedom: {df}')
         print(f'Here is your E: {e:4f}')
