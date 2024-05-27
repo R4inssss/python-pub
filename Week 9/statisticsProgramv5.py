@@ -223,6 +223,7 @@ class StudentTDistribution:
         return t
 
 
+# 13, Confidence interval for mean given unknown
 class ConfidenceIntervalDataSet:
     def __init__(self):
         print('What is the data? (given a data set)')
@@ -247,7 +248,10 @@ class ConfidenceIntervalDataSet:
         print(f'This is your coefficient variation: {cv}%')
         print('Enter c (confidence level):')
         conf = float(input())
-        df = n - 1
+        print('Is sigma known? (yes/no)')
+        sigma_known = input().strip().lower() == 'yes'
+
+        df = n if sigma_known else n - 1
         t = self.calc_t(conf, df)
         e = (t * (s / math.sqrt(n)))
         el = e - mean
