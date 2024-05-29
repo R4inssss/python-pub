@@ -4,7 +4,7 @@ import sys
 import math
 
 
-# I made a menu :)
+# ======================================== Menu ================================================= #
 class Statistics:
     def __init__(self):
         options = {
@@ -47,7 +47,7 @@ class Statistics:
             sys.exit('Choose a valid option.')
 
 
-# ============================= External Functions =========================================
+# ============================= External Functions ========================================= #
 
 # External Function 1, calculate t-distribution
 def calc_t(confidence, dof):
@@ -56,7 +56,7 @@ def calc_t(confidence, dof):
     return t
 
 
-# ================================== Classes =================================================
+# ================================== Classes ================================================ #
 # 1
 class OneBoundaries:
     def __init__(self):
