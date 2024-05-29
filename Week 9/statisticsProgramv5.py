@@ -21,7 +21,8 @@ class Statistics:
             '11': CDFSolver,
             '12': StudentTDistribution,
             '13': ConfidenceIntervalDataSet,
-            '14': ConfidenceIntervalNoSet
+            '14': ConfidenceIntervalNoSet,
+            '15': ConIntZ
         }
         print('''Choose an option:
 1 = One boundary
@@ -38,6 +39,7 @@ class Statistics:
 12 = Student T-distribution
 13 = confidence interval given a data set
 14 = confidence interval non data set
+15 = confidence interval for Z
 ''')
 
         choice = input(">>> ")
@@ -54,6 +56,13 @@ def calc_t(confidence, dof):
     alpha = (1 + confidence) / 2
     t = stats.t.ppf(alpha, dof)
     return t
+
+
+# External Function 2, calculate z-distribution
+def calc_z(confidence):
+    alpha = (1 + confidence) / 2
+    z = stats.norm.ppf(alpha)
+    return z
 
 
 # ================================== Classes ================================================ #
@@ -253,6 +262,7 @@ class ConfidenceIntervalDataSet:
         print(f'This is your n: {n}')
         print(f'This is your coefficient variation: {cv}%')
         print('Enter c (confidence level):')
+        print('==========================================')
         conf = float(input())
         print('Is sigma known? (yes/no)')
         sigma_known = input().strip().lower() == 'yes'
@@ -291,6 +301,20 @@ class ConfidenceIntervalNoSet:
         eu = mean + e
         print(f'Here is your t-distribution critical value: {t:.4f}')
         print(f'Here is your degrees of freedom: {df}')
+        print(f'Here is your E: {e:4f}')
+        print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
+
+
+# 15, confidence interval with Z (no data set)
+class ConIntZ:
+    def __init__(self):
+        print('What is the data? mean, c level, n, sigma')
+        mean, conf, n, s = map(float, input('>>> ').split())
+        z = calc_z(conf)
+        e = (z * (s / math.sqrt(n)))
+        el = mean - e
+        eu = mean + e
+        print(f'Here is your z-distribution critical value: {z:.4f}')
         print(f'Here is your E: {e:4f}')
         print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
 
