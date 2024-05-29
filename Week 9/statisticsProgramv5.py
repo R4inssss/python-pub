@@ -47,6 +47,16 @@ class Statistics:
             sys.exit('Choose a valid option.')
 
 
+# External Functions
+
+# External Function 1, calculate t-distribution
+def calc_t(confidence, dof):
+    alpha = (1 + confidence) / 2
+    t = stats.t.ppf(alpha, dof)
+    return t
+
+
+# Classes
 # 1
 class OneBoundaries:
     def __init__(self):
@@ -214,14 +224,9 @@ class StudentTDistribution:
         print('Enter c (confidence level) and n (sample size):')
         conf, n = map(float, input('>>> ').split())
         df = n - 1
-        t = self.calc_t(conf, df)
+        t = calc_t(conf, df)
         print(f'Here is your t-distribution critical value: {t:.4f}')
         print(f'Here is your degrees of freedom: {df}')
-
-    def calc_t(self, confidence, dof):
-        alpha = (1 + confidence) / 2
-        t = stats.t.ppf(alpha, dof)
-        return t
 
 
 # 13, Confidence interval for mean given unknown
@@ -253,7 +258,7 @@ class ConfidenceIntervalDataSet:
         sigma_known = input().strip().lower() == 'yes'
 
         df = n if sigma_known else n - 1
-        t = self.calc_t(conf, df)
+        t = calc_t(conf, df)
         e = (t * (s / math.sqrt(n)))
         el = mean - e
         eu = mean + e
@@ -261,11 +266,6 @@ class ConfidenceIntervalDataSet:
         print(f'Here is your degrees of freedom: {df}')
         print(f'Here is your E: {e:4f}')
         print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
-
-    def calc_t(self, confidence, dof):
-        alpha = (1 + confidence) / 2
-        t = stats.t.ppf(alpha, dof)
-        return t
 
 
 # 14, c-interval no data set
@@ -285,7 +285,7 @@ class ConfidenceIntervalNoSet:
             s = float(input('>>> '))
             df = n - 1
 
-        t = self.calc_t(conf, df)
+        t = calc_t(conf, df)
         e = (t * (s / math.sqrt(n)))
         el = mean - e
         eu = mean + e
@@ -293,11 +293,6 @@ class ConfidenceIntervalNoSet:
         print(f'Here is your degrees of freedom: {df}')
         print(f'Here is your E: {e:4f}')
         print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
-
-    def calc_t(self, confidence, dof):
-        alpha = (1 + confidence) / 2
-        t = stats.t.ppf(alpha, dof)
-        return t
 
 
 if __name__ == '__main__':
