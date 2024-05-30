@@ -22,7 +22,8 @@ class Statistics:
             '12': StudentTDistribution,
             '13': ConfidenceIntervalDataSet,
             '14': ConfidenceIntervalNoSet,
-            '15': ConIntZ
+            '15': ConIntZ,
+            '16': ContIntZDataSet
         }
         print('''Choose an option:
 1 = One boundary
@@ -39,7 +40,8 @@ class Statistics:
 12 = Student T-distribution
 13 = confidence interval given a data set
 14 = confidence interval non data set
-15 = confidence interval for Z
+15 = confidence interval for Z no data set
+16 = confidence interval for Z given data set
 ''')
 
         choice = input(">>> ")
@@ -310,6 +312,40 @@ class ConIntZ:
     def __init__(self):
         print('What is the data? mean, c level, n, sigma')
         mean, conf, n, s = map(float, input('>>> ').split())
+        z = calc_z(conf)
+        e = (z * (s / math.sqrt(n)))
+        el = mean - e
+        eu = mean + e
+        print(f'Here is your z-distribution critical value: {z:.4f}')
+        print(f'Here is your E: {e:4f}')
+        print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
+
+
+class ContIntZDataSet:
+    def __init__(self):
+        print('What is the data? (given a data set)')
+        data = input('>>> ')
+        data = [float(x) for x in data.split()]
+        mean = sum(data) / len(data)
+        square = sum((x - mean) ** 2 for x in data)
+        n = len(data)
+        s = (square / (n - 1)) ** 0.5
+        s2 = (square / (n - 1))
+        cv = (s / mean) * 100
+        mini = min(data)
+        maxi = max(data)
+        range_value = maxi - mini
+        printing_data = sorted(data)
+        print(f'Here is your data{printing_data}')
+        print(f'The sample standard deviation is: {s}')
+        print(f'The sample variance is: {s2}')
+        print(f'This is your range {range_value}')
+        print(f'This is your mean: {mean}')
+        print(f'This is your n: {n}')
+        print(f'This is your coefficient variation: {cv}%')
+        print('Enter c (confidence level):')
+        print('==========================================')
+        conf = float(input())
         z = calc_z(conf)
         e = (z * (s / math.sqrt(n)))
         el = mean - e
