@@ -67,6 +67,49 @@ def calc_z(confidence):
     return z
 
 
+# External Function 3, process a data set given the values and standardized names
+def data_sets():
+    print('What is the data? (given a data set)')
+    data = input('>>> ')
+    data = [float(x) for x in data.split()]
+    mean = sum(data) / len(data)
+    square = sum((x - mean) ** 2 for x in data)
+    n = len(data)
+    s = (square / (n - 1)) ** 0.5
+    s2 = (square / (n - 1))
+    cv = (s / mean) * 100
+    mini = min(data)
+    maxi = max(data)
+    data_sorted = sorted(data)
+    range_value = maxi - mini
+    stats_summary = {
+        'sorted_data': data_sorted,
+        'mean': mean,
+        'std_dev': s,
+        'variance': s2,
+        'range': range_value,
+        'n': n,
+        'cv': cv,
+    }
+    return stats_summary
+
+
+# External Function 4, Calculating Confidence Intervals (z) | E | Upper/Lower Limits
+# def calc_int(stats_summary):
+#     print('Enter c (confidence level):')
+#     conf = float(input())
+#     z = calc_z(conf)
+#     mean = stats_summary['mean']
+#     s = stats_summary['std_dev']
+#     n = stats_summary['n']
+#     e = (z * (s / math.sqrt(n)))
+#     el = mean - e
+#     eu = mean + e
+#     print(f'Here is your z-distribution critical value: {z:.4f}')
+#     print(f'Here is your E: {e:.4f}')
+#     print(f'Here is your lower E and upper E: {el:.4f} and {eu:.4f}')
+
+
 # ================================== Classes ================================================ #
 # 1
 class OneBoundaries:
@@ -127,26 +170,17 @@ class CalculateZ:
 # 5 cv/std deviation given a set of data
 class CV:
     def __init__(self):
-        print('What is the data? (given a data set)')
-        data = input('>>> ')
-        data = [float(x) for x in data.split()]
-        mean = sum(data) / len(data)
-        square = sum((x - mean) ** 2 for x in data)
-        n = len(data)
-        s = (square / (n - 1)) ** 0.5
-        s2 = (square / (n - 1))
-        cv = (s / mean) * 100
-        mini = min(data)
-        maxi = max(data)
-        data_sorted = sorted(data)
-        range_value = maxi - mini
-        print(f'Your sorted data: {data_sorted}')
-        print(f'The sample standard deviation is: {s}')
-        print(f'The sample variance is: {s2}')
-        print(f'This is your range {range_value}')
-        print(f'This is your mean: {mean}')
-        print(f'This is your n: {n}')
-        print(f'This is your coefficient variation: {cv}%')
+        stats_summary = data_sets()
+        self.stats(stats_summary)
+
+    def stats(self, stats_summary):
+        print(f'Your sorted data: {stats_summary["sorted_data"]}')
+        print(f'The sample standard deviation is: {stats_summary["std_dev"]}')
+        print(f'The sample variance is: {stats_summary["variance"]}')
+        print(f'This is your range: {stats_summary["range"]}')
+        print(f'This is your mean: {stats_summary["mean"]}')
+        print(f'This is your n: {stats_summary["n"]}')
+        print(f'This is your coefficient variation: {stats_summary["cv"]}%')
 
 
 # 6 Creating standard z using std deviation of sigma(xbar) distribution
@@ -243,41 +277,39 @@ class StudentTDistribution:
 # 13, Confidence interval for mean given unknown
 class ConfidenceIntervalDataSet:
     def __init__(self):
-        print('What is the data? (given a data set)')
-        data = input('>>> ')
-        data = [float(x) for x in data.split()]
-        mean = sum(data) / len(data)
-        square = sum((x - mean) ** 2 for x in data)
-        n = len(data)
-        s = (square / (n - 1)) ** 0.5
-        s2 = (square / (n - 1))
-        cv = (s / mean) * 100
-        mini = min(data)
-        maxi = max(data)
-        range_value = maxi - mini
-        printing_data = sorted(data)
-        print(f'Here is your data{printing_data}')
-        print(f'The sample standard deviation is: {s}')
-        print(f'The sample variance is: {s2}')
-        print(f'This is your range {range_value}')
-        print(f'This is your mean: {mean}')
-        print(f'This is your n: {n}')
-        print(f'This is your coefficient variation: {cv}%')
+        stats_summary = data_sets()
+        self.stats(stats_summary)
+        self.conf_int(stats_summary)
+
+    def stats(self, stats_summary):
+        print(f'Your sorted data: {stats_summary["sorted_data"]}')
+        print(f'The sample standard deviation is: {stats_summary["std_dev"]}')
+        print(f'The sample variance is: {stats_summary["variance"]}')
+        print(f'This is your range: {stats_summary["range"]}')
+        print(f'This is your mean: {stats_summary["mean"]}')
+        print(f'This is your n: {stats_summary["n"]}')
+        print(f'This is your coefficient variation: {stats_summary["cv"]}%')
+
+    def conf_int(self, stats_summary):
         print('Enter c (confidence level):')
         print('==========================================')
         conf = float(input())
-        print('Is sigma known? (yes/no)')
-        sigma_known = input().strip().lower() == 'yes'
-
-        df = n if sigma_known else n - 1
-        t = calc_t(conf, df)
-        e = (t * (s / math.sqrt(n)))
+        z = calc_z(conf)
+        mean = stats_summary['mean']
+        s = stats_summary['std_dev']
+        n = stats_summary['n']
+        e = (z * (s / math.sqrt(n)))
         el = mean - e
         eu = mean + e
+        print(f'Here is your z-distribution critical value: {z:.4f}')
+        print(f'Here is your E: {e:4f}')
+        print(f'Here is your lower e and upper e: {el:.4f} and {eu:.4f}')
+        print('Is sigma known? (yes/no)')
+        sigma_known = input().strip().lower() == 'yes'
+        df = n if sigma_known else n - 1
+        t = calc_t(conf, df)
         print(f'Here is your t-distribution critical value: {t:.4f}')
         print(f'Here is your degrees of freedom: {df}')
-        print(f'Here is your E: {e:4f}')
-        print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
 
 
 # 14, c-interval no data set
@@ -321,32 +353,30 @@ class ConIntZ:
         print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
 
 
+# 16,
 class ContIntZDataSet:
     def __init__(self):
-        print('What is the data? (given a data set)')
-        data = input('>>> ')
-        data = [float(x) for x in data.split()]
-        mean = sum(data) / len(data)
-        square = sum((x - mean) ** 2 for x in data)
-        n = len(data)
-        s = (square / (n - 1)) ** 0.5
-        s2 = (square / (n - 1))
-        cv = (s / mean) * 100
-        mini = min(data)
-        maxi = max(data)
-        range_value = maxi - mini
-        printing_data = sorted(data)
-        print(f'Here is your data{printing_data}')
-        print(f'The sample standard deviation is: {s}')
-        print(f'The sample variance is: {s2}')
-        print(f'This is your range {range_value}')
-        print(f'This is your mean: {mean}')
-        print(f'This is your n: {n}')
-        print(f'This is your coefficient variation: {cv}%')
+        stats_summary = data_sets()
+        self.stats(stats_summary)
+        self.conf_int(stats_summary)
+
+    def stats(self, stats_summary):
+        print(f'Your sorted data: {stats_summary["sorted_data"]}')
+        print(f'The sample standard deviation is: {stats_summary["std_dev"]}')
+        print(f'The sample variance is: {stats_summary["variance"]}')
+        print(f'This is your range: {stats_summary["range"]}')
+        print(f'This is your mean: {stats_summary["mean"]}')
+        print(f'This is your n: {stats_summary["n"]}')
+        print(f'This is your coefficient variation: {stats_summary["cv"]}%')
+
+    def conf_int(self, stats_summary):
         print('Enter c (confidence level):')
         print('==========================================')
         conf = float(input())
         z = calc_z(conf)
+        mean = stats_summary['mean']
+        s = stats_summary['std_dev']
+        n = stats_summary['n']
         e = (z * (s / math.sqrt(n)))
         el = mean - e
         eu = mean + e
