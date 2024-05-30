@@ -94,20 +94,41 @@ def data_sets():
     return stats_summary
 
 
-# External Function 4, Calculating Confidence Intervals (z) | E | Upper/Lower Limits
-# def calc_int(stats_summary):
-#     print('Enter c (confidence level):')
-#     conf = float(input())
-#     z = calc_z(conf)
-#     mean = stats_summary['mean']
-#     s = stats_summary['std_dev']
-#     n = stats_summary['n']
-#     e = (z * (s / math.sqrt(n)))
-#     el = mean - e
-#     eu = mean + e
-#     print(f'Here is your z-distribution critical value: {z:.4f}')
-#     print(f'Here is your E: {e:.4f}')
-#     print(f'Here is your lower E and upper E: {el:.4f} and {eu:.4f}')
+# External Function 4, Calculating Interval for Z | Upper/Lower Limits | E value calculation
+def calc_int(stats_summary=None):
+    print('Data set? (yes or no)')
+    response = input('>>> ').lower()
+    if response == 'yes' and stats_summary is not None:
+        try:
+            print('Enter c (confidence level):')
+            conf = float(input())
+            z = calc_z(conf)
+            mean = stats_summary['mean']
+            s = stats_summary['std_dev']
+            n = stats_summary['n']
+            e = (z * (s / math.sqrt(n)))
+            el = mean - e
+            eu = mean + e
+            print(f'Here is your z-distribution critical value: {z:.4f}')
+            print(f'Here is your E: {e:.4f}')
+            print(f'Here is your lower E and upper E: {el:.4f} and {eu:.4f}')
+        except Exception as e:
+            print(f'Error: {e}')
+    elif response == 'no':
+        try:
+            print('What is the data? mean, c level, n, sigma')
+            mean, conf, n, s = map(float, input('>>> ').split())
+            z = calc_z(conf)
+            e = (z * (s / math.sqrt(n)))
+            el = mean - e
+            eu = mean + e
+            print(f'Here is your z-distribution critical value: {z:.4f}')
+            print(f'Here is your E: {e:4f}')
+            print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
+        except Exception as e:
+            print(f'Error: {e}')
+    else:
+        print('Invalid response or missing data set.')
 
 
 # ================================== Classes ================================================ #
@@ -293,22 +314,20 @@ class ConfidenceIntervalDataSet:
     def conf_int(self, stats_summary):
         print('Enter c (confidence level):')
         print('==========================================')
-        conf = float(input())
-        z = calc_z(conf)
-        mean = stats_summary['mean']
-        s = stats_summary['std_dev']
-        n = stats_summary['n']
-        e = (z * (s / math.sqrt(n)))
-        el = mean - e
-        eu = mean + e
-        print(f'Here is your z-distribution critical value: {z:.4f}')
-        print(f'Here is your E: {e:4f}')
-        print(f'Here is your lower e and upper e: {el:.4f} and {eu:.4f}')
+        conf = float(input('>>> '))
         print('Is sigma known? (yes/no)')
-        sigma_known = input().strip().lower() == 'yes'
+        sigma_known = input('>>> ').strip().lower() == 'yes'
+        n = stats_summary['n']
         df = n if sigma_known else n - 1
         t = calc_t(conf, df)
+        mean = stats_summary['mean']
+        s = stats_summary['std_dev']
+        e = (t * (s / math.sqrt(n)))
+        el = mean - e
+        eu = mean + e
         print(f'Here is your t-distribution critical value: {t:.4f}')
+        print(f'Here is your E: {e:4f}')
+        print(f'Here is your lower e and upper e: {el:.4f} and {eu:.4f}')
         print(f'Here is your degrees of freedom: {df}')
 
 
@@ -318,7 +337,7 @@ class ConfidenceIntervalNoSet:
         print('What is the data? mean, c level, n, ')
         mean, conf, n = map(float, input('>>> ').split())
         print('Is sigma known? (yes/no)')
-        sigma_known = input().strip().lower() == 'yes'
+        sigma_known = input('>>> ').strip().lower() == 'yes'
         if sigma_known:
             print('What is the sigma?')
             sigma = float(input('>>> '))
@@ -342,23 +361,15 @@ class ConfidenceIntervalNoSet:
 # 15, confidence interval with Z (no data set)
 class ConIntZ:
     def __init__(self):
-        print('What is the data? mean, c level, n, sigma')
-        mean, conf, n, s = map(float, input('>>> ').split())
-        z = calc_z(conf)
-        e = (z * (s / math.sqrt(n)))
-        el = mean - e
-        eu = mean + e
-        print(f'Here is your z-distribution critical value: {z:.4f}')
-        print(f'Here is your E: {e:4f}')
-        print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
+        calc_int()
 
 
-# 16,
+# 16, confidence interval with Z given a data set
 class ContIntZDataSet:
     def __init__(self):
         stats_summary = data_sets()
         self.stats(stats_summary)
-        self.conf_int(stats_summary)
+        calc_int(stats_summary)
 
     def stats(self, stats_summary):
         print(f'Your sorted data: {stats_summary["sorted_data"]}')
@@ -368,21 +379,6 @@ class ContIntZDataSet:
         print(f'This is your mean: {stats_summary["mean"]}')
         print(f'This is your n: {stats_summary["n"]}')
         print(f'This is your coefficient variation: {stats_summary["cv"]}%')
-
-    def conf_int(self, stats_summary):
-        print('Enter c (confidence level):')
-        print('==========================================')
-        conf = float(input())
-        z = calc_z(conf)
-        mean = stats_summary['mean']
-        s = stats_summary['std_dev']
-        n = stats_summary['n']
-        e = (z * (s / math.sqrt(n)))
-        el = mean - e
-        eu = mean + e
-        print(f'Here is your z-distribution critical value: {z:.4f}')
-        print(f'Here is your E: {e:4f}')
-        print(f'Here is your lower e and upper e: {el:4f} and {eu:4f}')
 
 
 if __name__ == '__main__':
