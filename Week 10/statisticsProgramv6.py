@@ -1,4 +1,4 @@
-# Statistics Program v.5
+# Statistics Program v.6
 import scipy.stats as stats
 import sys
 import math
