@@ -69,7 +69,13 @@ def calc_z(confidence):
     return z
 
 
-# External Function 3, process a data set given the values and standardized names
+# External Function 3, Calculate for z using sample mean
+def calc_z_xbar(xbar, mu, sigma, n):
+    z = (xbar - mu) / (sigma / math.sqrt(n))
+    return z
+
+
+# External Function 4, process a data set given the values and standardized names
 def data_sets():
     print('What is the data? (given a data set)')
     data = input('>>> ')
@@ -96,7 +102,7 @@ def data_sets():
     return stats_summary
 
 
-# External Function 4, Calculating Interval for Z | Upper/Lower Limits | E value calculation
+# External Function 5, Calculating Interval for Z | Upper/Lower Limits | E value calculation
 def calc_int(stats_summary=None):
     print('Data set? (yes or no)')
     response = input('>>> ').lower()
@@ -131,12 +137,6 @@ def calc_int(stats_summary=None):
             print(f'Error: {e}')
     else:
         print('Invalid response or missing data set.')
-
-
-# External 5, Calculate for z using sample mean
-def calc_z_xbar(xbar, mu, sigma, n):
-    z = (xbar - mu) / (sigma / math.sqrt(n))
-    return z
 
 
 # ================================== Classes ================================================ #
