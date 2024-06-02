@@ -136,8 +136,7 @@ def calc_int(stats_summary=None):
 # External 5, Calculate for z using sample mean
 def calc_z_xbar(xbar, mu, sigma, n):
     z = (xbar - mu) / (sigma / math.sqrt(n))
-    probability = stats.norm.cdf(z)
-    return z, probability
+    return z
 
 
 # ================================== Classes ================================================ #
@@ -395,7 +394,8 @@ class ZFromSampleMean:
     def __init__(self):
         print('Calculates z from sample mean: mean, mu, sigma, and n')
         xbar, mu, sigma, n = map(float, input('>>> ').split())
-        z, probability = calc_z_xbar(xbar, mu, sigma, n)
+        z = calc_z_xbar(xbar, mu, sigma, n)
+        probability = stats.norm.cdf(z)
         print(f'Your z-score is: {z:.4f}')
         print(f'Your probability is {probability:.4f}')
 
