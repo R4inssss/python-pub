@@ -39,8 +39,8 @@ class Statistics:
 10 = margin of error
 11 = cumulative distribution of individuals
 12 = Student T-distribution
-13 = confidence interval given a data set
-14 = confidence interval non data set
+13 = confidence interval t given a data set
+14 = confidence interval t non data set
 15 = confidence interval for Z no data set
 16 = confidence interval for Z given data set
 17 = z from sample mean
@@ -75,7 +75,14 @@ def calc_z_xbar(xbar, mu, sigma, n):
     return z
 
 
-# External Function 4, process a data set given the values and standardized names
+# External Function 4, Two Tails probability
+def two_tails(z):
+    prob_one_tail = stats.norm.cdf(-abs(z))
+    two_tail_probability = 2 * prob_one_tail
+    return two_tail_probability
+
+
+# External Function 5, process a data set given the values and standardized names
 def data_sets():
     print('What is the data? (given a data set)')
     data = input('>>> ')
@@ -102,7 +109,7 @@ def data_sets():
     return stats_summary
 
 
-# External Function 5, Calculating Interval for Z | Upper/Lower Limits | E value calculation
+# External Function 6, Calculating Interval for Z | Upper/Lower Limits | E value calculation
 def calc_int(stats_summary=None):
     print('Data set? (yes or no)')
     response = input('>>> ').lower()
@@ -303,7 +310,7 @@ class StudentTDistribution:
         print(f'Here is your degrees of freedom: {df}')
 
 
-# 13, Confidence interval for mean given unknown
+# 13, Confidence interval t for mean given unknown
 class ConfidenceIntervalDataSet:
     def __init__(self):
         stats_summary = data_sets()
@@ -339,7 +346,7 @@ class ConfidenceIntervalDataSet:
         print(f'Here is your degrees of freedom: {df}')
 
 
-# 14, c-interval no data set
+# 14, c-interval t no data set
 class ConfidenceIntervalNoSet:
     def __init__(self):
         print('What is the data? mean, c level, n, ')
@@ -396,8 +403,10 @@ class ZFromSampleMean:
         xbar, mu, sigma, n = map(float, input('>>> ').split())
         z = calc_z_xbar(xbar, mu, sigma, n)
         probability = stats.norm.cdf(z)
+        two_tail_probability = two_tails(z)
         print(f'Your z-score is: {z:.4f}')
         print(f'Your probability is {probability:.4f}')
+        print(f'Your two-tail probability is {two_tail_probability:.4f}')
 
 
 if __name__ == '__main__':
