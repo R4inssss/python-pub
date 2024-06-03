@@ -70,8 +70,8 @@ def calc_z(confidence):
 
 
 # External Function 3, Calculate for z using sample mean
-def calc_z_xbar(xbar, mu, sigma, n):
-    z = (xbar - mu) / (sigma / math.sqrt(n))
+def calc_z_xbar(xbar, mu, s, n):
+    z = (xbar - mu) / (s / math.sqrt(n))
     return z
 
 
@@ -90,8 +90,21 @@ def data_sets():
     mean = sum(data) / len(data)
     square = sum((x - mean) ** 2 for x in data)
     n = len(data)
-    s = (square / (n - 1)) ** 0.5
-    s2 = (square / (n - 1))
+
+    while True:
+        print('Population or Sample?")')
+        data_type = input('>>> ').strip().lower()
+        if data_type == 'sample':
+            s = (square / (n - 1)) ** 0.5
+            s2 = (square / (n - 1))
+            break
+        elif data_type == 'population':
+            s = (square / n) ** 0.5
+            s2 = (square / n)
+            break
+        else:
+            print('Please enter "population" or "sample"')
+
     cv = (s / mean) * 100
     mini = min(data)
     maxi = max(data)
@@ -400,8 +413,8 @@ class ContIntZDataSet:
 class ZFromSampleMean:
     def __init__(self):
         print('Calculates z from sample mean: mean, mu, sigma, and n')
-        xbar, mu, sigma, n = map(float, input('>>> ').split())
-        z = calc_z_xbar(xbar, mu, sigma, n)
+        xbar, mu, s, n = map(float, input('>>> ').split())
+        z = calc_z_xbar(xbar, mu, s, n)
         probability = stats.norm.cdf(z)
         two_tail_probability = two_tails(z)
         print(f'Your z-score is: {z:.4f}')
