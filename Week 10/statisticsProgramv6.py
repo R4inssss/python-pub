@@ -92,7 +92,7 @@ def data_sets():
     n = len(data)
 
     while True:
-        print('Population or Sample?")')
+        print('Population or Sample?')
         data_type = input('>>> ').strip().lower()
         if data_type == 'sample':
             s = (square / (n - 1)) ** 0.5
@@ -255,7 +255,7 @@ class MeanZ:
 # 7, standard error (aka sigma subset mean)
 class STDError:
     def __init__(self):
-        print('Given std deviation, and sample size.')
+        print('Given std deviation and sample size.')
         self.std, self.ss = map(float, input('>>> ').split())
         self.calculate_probability()
 
@@ -267,7 +267,7 @@ class STDError:
 # 8, population standard deviation
 class POPSTDDeviation:
     def __init__(self):
-        print('Given std deviation, and n.')
+        print('Given std deviation and n.')
         self.xbar, self.n = map(float, input('>>> ').split())
         self.calculate_probability()
 
