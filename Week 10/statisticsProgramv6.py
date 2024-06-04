@@ -1,4 +1,5 @@
 # Statistics Program v.6
+import numpy as np
 import scipy.stats as stats
 import sys
 import math
@@ -80,6 +81,24 @@ def two_tails(z):
     prob_one_tail = stats.norm.cdf(-abs(z))
     two_tail_probability = 2 * prob_one_tail
     return two_tail_probability
+
+
+def proportion():
+    print('What are your variables (p and n')
+    n, p = map(float, input().split())
+
+    while True:
+        print('Population or Sample?')
+        data_type = input('>>> ').strip().lower()
+        if data_type == 'sample':
+            SE = math.sqrt(p * (1 - p)/n)
+            break
+        elif data_type == 'population':
+            SE = math.sqrt(p * (1 - p) / n)
+            break
+        else:
+            print('Please enter "population" or "sample"')
+    print(f'Your standard Error is {SE:.4}')
 
 
 # External Function 5, process a data set given the values and standardized names
