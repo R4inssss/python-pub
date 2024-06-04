@@ -83,6 +83,7 @@ def two_tails(z):
     return two_tail_probability
 
 
+# External Function 5, proportion SE calculation
 def proportion():
     print('What are your variables (p and n')
     n, p = map(float, input().split())
@@ -101,7 +102,7 @@ def proportion():
     print(f'Your standard Error is {SE:.4}')
 
 
-# External Function 5, process a data set given the values and standardized names
+# External Function 6, process a data set given the values and standardized names
 def data_sets():
     print('What is the data? (given a data set)')
     data = input('>>> ')
@@ -141,7 +142,7 @@ def data_sets():
     return stats_summary
 
 
-# External Function 6, Calculating Interval for Z | Upper/Lower Limits | E value calculation
+# External Function 7, Calculating Interval for Z | Upper/Lower Limits | E value calculation
 def calc_int(stats_summary=None):
     print('Data set? (yes or no)')
     response = input('>>> ').lower()
