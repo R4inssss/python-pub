@@ -1,5 +1,4 @@
 # Statistics Program v.6
-import numpy as np
 import scipy.stats as stats
 import sys
 import math
@@ -25,7 +24,8 @@ class Statistics:
             '14': ConfidenceIntervalNoSet,
             '15': ConIntZ,
             '16': ContIntZDataSet,
-            '17': ZFromSampleMean
+            '17': ZFromSampleMean,
+            '18': Phat
         }
         print('''Choose an option:
 1 = One boundary
@@ -45,6 +45,7 @@ class Statistics:
 15 = confidence interval for Z no data set
 16 = confidence interval for Z given data set
 17 = z from sample mean
+18 = probability using p/phat
 ''')
 
         choice = input(">>> ")
@@ -85,21 +86,17 @@ def two_tails(z):
 
 # External Function 5, proportion SE calculation
 def proportion():
-    print('What are your variables (p and n')
+    print('Enter your variables (n for sample size and p for proportion):')
     n, p = map(float, input().split())
+    if not (0 <= p <= 1):
+        print("The proportion p must be between 0 and 1.")
+        return
+    if n <= 0:
+        print("The sample size n must be a positive number.")
+        return
+    se = math.sqrt(p * (1 - p) / n)
 
-    while True:
-        print('Population or Sample?')
-        data_type = input('>>> ').strip().lower()
-        if data_type == 'sample':
-            SE = math.sqrt(p * (1 - p)/n)
-            break
-        elif data_type == 'population':
-            SE = math.sqrt(p * (1 - p) / n)
-            break
-        else:
-            print('Please enter "population" or "sample"')
-    print(f'Your standard Error is {SE:.4}')
+    print(f'Your standard error is {se:.4f}')
 
 
 # External Function 6, process a data set given the values and standardized names
@@ -440,6 +437,12 @@ class ZFromSampleMean:
         print(f'Your z-score is: {z:.4f}')
         print(f'Your probability is {probability:.4f}')
         print(f'Your two-tail probability is {two_tail_probability:.4f}')
+
+
+# 18, proportion classes, given p
+class Phat:
+    def __init__(self):
+        proportion()
 
 
 if __name__ == '__main__':
