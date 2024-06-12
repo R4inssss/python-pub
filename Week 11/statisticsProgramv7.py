@@ -28,7 +28,8 @@ class Statistics:
             '17': ZFromSampleMean,
             '18': Phat,
             '19': Scattered,
-            '20': Arr
+            '20': Arr,
+            '21': SumSquare
         }
 
         print('''Choose an option:
@@ -52,6 +53,7 @@ class Statistics:
 18 = probability using p/phat
 19 = scatter plot visual
 20 = r calculation given variables 
+21 = sum of squares given a dataset
 ''')
 
         choice = input(">>> ")
@@ -190,6 +192,16 @@ def calculate_r(n, sumx, sumx2, sumy, sumy2, sumxy):
     denominator = math.sqrt((n * sumx2 - sumx ** 2) * (n * sumy2 - sumy ** 2))
     r = numerator / denominator
     return r
+
+
+# External Function 9, sum of squares
+def sum_squares():
+    x = list(map(int, input('>>> ').split()))
+    n = len(x)
+    s = sum(xi ** 2 for xi in x)
+    print(f'Your number of variables: {n}')
+    print(f'Your sum of squares is {s:.4f}')
+
 
 # ================================== Classes ================================================ #
 
@@ -496,6 +508,11 @@ class Arr:
             print('As x increases, y tends to decrease.(negative correlation).')
         else:
             print('There is no linear relationship between x and y.')
+
+
+class SumSquare:
+    def __init__(self):
+        sum_squares()
 
 
 if __name__ == '__main__':
