@@ -480,11 +480,6 @@ class Scattered:
         plt.ylabel('y - axis')
         plt.title('Scatter plot')
         plt.show()
-        plt.plot(x, y)
-        plt.xlabel('x - axis')
-        plt.ylabel('y - axis')
-        plt.title('Scatter plot')
-        plt.show()
 
 
 # 20, r calculation
