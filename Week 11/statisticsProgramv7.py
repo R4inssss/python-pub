@@ -510,8 +510,10 @@ class Arr:
             print('There is no linear relationship between x and y.')
 
 
+# 21, sum of squares given an array of integers
 class SumSquare:
     def __init__(self):
+        print('What are your values?')
         sum_squares()
 
 
