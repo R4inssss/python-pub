@@ -1,0 +1,43 @@
+C:\Users\Peter\AppData\Local\Discord\app-1.0.9151\Discord.exe
+C:\Users\Peter\AppData\Local\GitHubDesktop\app-3.3.18\GitHubDesktop.exe
+C:\Users\Peter\AppData\Local\GitHubDesktop\app-3.4.1\GitHubDesktop.exe
+C:\Users\Peter\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.4.1.nupkg
+C:\Users\Peter\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data\data_3
+C:\Users\Peter\AppData\Local\JxBrowser\7.29\chrome.dll
+C:\Users\Peter\AppData\Local\Microsoft\OneNote\16.0\cache\0000000G.bin
+C:\Users\Peter\AppData\Local\Microsoft\Teams\current\Teams.exe
+C:\Users\Peter\AppData\Local\Microsoft\Teams\packages\Teams-1.6.00.26474-full.nupkg
+C:\Users\Peter\AppData\Local\Microsoft\Teams\previous\Teams.exe
+C:\Users\Peter\AppData\Local\Obsidian\Obsidian.exe
+C:\Users\Peter\AppData\Local\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\game\libcef.dll
+C:\Users\Peter\AppData\Local\Programs\Anki\lib\PyQt6\Qt6\bin\Qt6WebEngineCore.dll
+C:\Users\Peter\AppData\Local\Programs\Microsoft VS Code\Code.exe
+C:\Users\Peter\AppData\Local\SquirrelTemp\tempb\lib\net45\WeMod.exe
+C:\Users\Peter\AppData\Local\VMware\vmware-download-26914\cdstmp_player-windows_17.5.2_23775571\VMware-player-17.5.2-23775571.exe
+C:\Users\Peter\AppData\Local\WeMod\app-8.19.0\WeMod.exe
+C:\Users\Peter\AppData\Local\WeMod\app-9.4.0\WeMod.exe
+C:\Users\Peter\AppData\Local\WeMod\packages\WeMod-9.4.0-full.nupkg
+C:\Users\Peter\AppData\Roaming\Code\CachedExtensionVSIXs\ms-dotnettools.csharp-2.31.19-win32-x64
+C:\Users\Peter\AppData\Roaming\Microsoft\Teams\Cache\Cache_Data\data_3
+C:\Users\Peter\AppData\Roaming\OnVUE\browser-lock.zip
+C:\Users\Peter\AppData\Roaming\Thunderstore Mod Manager\DataFolder\LethalCompany\last_api_request.json
+C:\Users\Peter\Downloads\anki-2.1.66-windows-qt6.exe
+C:\Users\Peter\Downloads\calibre-64bit-7.9.0.msi
+C:\Users\Peter\Downloads\CiscoPacketTracer_821_Windows_64bit.exe
+C:\Users\Peter\Downloads\dotnet-sdk-8.0.203-win-x64.exe
+C:\Users\Peter\Downloads\Fedora-Workstation-Live-x86_64-39-1.5.iso
+C:\Users\Peter\Downloads\ghidra_11.0.2_PUBLIC_20240326.zip
+C:\Users\Peter\Downloads\GitHubDesktopSetup-x64.exe
+C:\Users\Peter\Downloads\jdk-22_windows-x64_bin.exe
+C:\Users\Peter\Downloads\JetBrains.Rider-2024.1.2.exe
+C:\Users\Peter\Downloads\kali-linux-2023.3a-hyperv-amd64.7z
+C:\Users\Peter\Downloads\kali-linux-2024.1-hyperv-amd64.7z
+C:\Users\Peter\Downloads\pycharm-professional-2024.1.1.exe
+C:\Users\Peter\Downloads\Rocky-9.3-x86_64-dvd.iso
+C:\Users\Peter\Downloads\VirtualBox-7.0.10-158379-Win.exe
+C:\Users\Peter\Downloads\VMware-player-full-17.5.1-23298084.exe
+C:\Users\Peter\Downloads\kali-linux-2023.3a-hyperv-amd64\kali-linux-2023.3a-hyperv-amd64.vhdx
+C:\Users\Peter\OneDrive\Desktop\The Flash back\Linux Distros\kali-linux-2023.3-live-amd64.iso
+C:\Users\Peter\OneDrive\Desktop\The Flash back\Linux Distros\kali-linux-2023.3-live-arm64.iso
+C:\Users\Peter\OneDrive\Desktop\The Flash back\Linux Distros\proxmox-ve_8.0-2.iso
+C:\Users\Peter\VirtualBox VMs\Test1\Test1.vdi
