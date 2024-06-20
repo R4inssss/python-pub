@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-import calculator_appv2
+import statisticsProgramv7
 
 
 # ------------------------------- Main ------------------------------- #
