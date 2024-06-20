@@ -1,43 +1,138 @@
-C:\Users\Peter\AppData\Local\Discord\app-1.0.9151\Discord.exe
-C:\Users\Peter\AppData\Local\GitHubDesktop\app-3.3.18\GitHubDesktop.exe
-C:\Users\Peter\AppData\Local\GitHubDesktop\app-3.4.1\GitHubDesktop.exe
-C:\Users\Peter\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.4.1.nupkg
-C:\Users\Peter\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data\data_3
-C:\Users\Peter\AppData\Local\JxBrowser\7.29\chrome.dll
-C:\Users\Peter\AppData\Local\Microsoft\OneNote\16.0\cache\0000000G.bin
-C:\Users\Peter\AppData\Local\Microsoft\Teams\current\Teams.exe
-C:\Users\Peter\AppData\Local\Microsoft\Teams\packages\Teams-1.6.00.26474-full.nupkg
-C:\Users\Peter\AppData\Local\Microsoft\Teams\previous\Teams.exe
-C:\Users\Peter\AppData\Local\Obsidian\Obsidian.exe
-C:\Users\Peter\AppData\Local\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\game\libcef.dll
-C:\Users\Peter\AppData\Local\Programs\Anki\lib\PyQt6\Qt6\bin\Qt6WebEngineCore.dll
-C:\Users\Peter\AppData\Local\Programs\Microsoft VS Code\Code.exe
-C:\Users\Peter\AppData\Local\SquirrelTemp\tempb\lib\net45\WeMod.exe
-C:\Users\Peter\AppData\Local\VMware\vmware-download-26914\cdstmp_player-windows_17.5.2_23775571\VMware-player-17.5.2-23775571.exe
-C:\Users\Peter\AppData\Local\WeMod\app-8.19.0\WeMod.exe
-C:\Users\Peter\AppData\Local\WeMod\app-9.4.0\WeMod.exe
-C:\Users\Peter\AppData\Local\WeMod\packages\WeMod-9.4.0-full.nupkg
-C:\Users\Peter\AppData\Roaming\Code\CachedExtensionVSIXs\ms-dotnettools.csharp-2.31.19-win32-x64
-C:\Users\Peter\AppData\Roaming\Microsoft\Teams\Cache\Cache_Data\data_3
-C:\Users\Peter\AppData\Roaming\OnVUE\browser-lock.zip
-C:\Users\Peter\AppData\Roaming\Thunderstore Mod Manager\DataFolder\LethalCompany\last_api_request.json
-C:\Users\Peter\Downloads\anki-2.1.66-windows-qt6.exe
-C:\Users\Peter\Downloads\calibre-64bit-7.9.0.msi
-C:\Users\Peter\Downloads\CiscoPacketTracer_821_Windows_64bit.exe
-C:\Users\Peter\Downloads\dotnet-sdk-8.0.203-win-x64.exe
-C:\Users\Peter\Downloads\Fedora-Workstation-Live-x86_64-39-1.5.iso
-C:\Users\Peter\Downloads\ghidra_11.0.2_PUBLIC_20240326.zip
-C:\Users\Peter\Downloads\GitHubDesktopSetup-x64.exe
-C:\Users\Peter\Downloads\jdk-22_windows-x64_bin.exe
-C:\Users\Peter\Downloads\JetBrains.Rider-2024.1.2.exe
-C:\Users\Peter\Downloads\kali-linux-2023.3a-hyperv-amd64.7z
-C:\Users\Peter\Downloads\kali-linux-2024.1-hyperv-amd64.7z
-C:\Users\Peter\Downloads\pycharm-professional-2024.1.1.exe
-C:\Users\Peter\Downloads\Rocky-9.3-x86_64-dvd.iso
-C:\Users\Peter\Downloads\VirtualBox-7.0.10-158379-Win.exe
-C:\Users\Peter\Downloads\VMware-player-full-17.5.1-23298084.exe
-C:\Users\Peter\Downloads\kali-linux-2023.3a-hyperv-amd64\kali-linux-2023.3a-hyperv-amd64.vhdx
-C:\Users\Peter\OneDrive\Desktop\The Flash back\Linux Distros\kali-linux-2023.3-live-amd64.iso
-C:\Users\Peter\OneDrive\Desktop\The Flash back\Linux Distros\kali-linux-2023.3-live-arm64.iso
-C:\Users\Peter\OneDrive\Desktop\The Flash back\Linux Distros\proxmox-ve_8.0-2.iso
-C:\Users\Peter\VirtualBox VMs\Test1\Test1.vdi
+C:\hiberfil.sys
+C:\pagefile.sys
+C:\$Recycle.Bin\S-1-5-21-1193430742-4289364762-741939382-1001\$RAHZ3OS.exe
+C:\$WinREAgent\Backup\winre.wim
+C:\$WinREAgent\Scratch\update.wim
+C:\AMD\RyzenMasterExtract\MSIFiles\Packages\AMD Ryzen Master UI.exe
+C:\Program Files\AMD\CNext\CNext\Qt6WebEngineCore.dll
+C:\Program Files\Bitdefender\Bitdefender Security App\Safepay\libcef.dll
+C:\Program Files\Calibre2\app\bin\Qt6WebEngineCore.dll
+C:\Program Files\Cisco Packet Tracer 8.2.1\bin\Qt5WebEngineCore.dll
+C:\Program Files\Corsair\Corsair iCUE5 Software\cue_qml_plugins\CanvasCueQmlPlugin.dll
+C:\Program Files\Google\Chrome\Application\125.0.6422.176\chrome.dll
+C:\Program Files\Google\Chrome\Application\126.0.6478.114\chrome.dll
+C:\Program Files\Google\Chrome\Application\126.0.6478.114\Installer\chrome.7z
+C:\Program Files\Java\jdk-22\lib\modules
+C:\Program Files\JetBrains\JetBrains Rider 2024.1.2\jbr\bin\libcef.dll
+C:\Program Files\JetBrains\JetBrains Rider 2024.1.2\lib\app-client.jar
+C:\Program Files\JetBrains\JetBrains Rider 2024.1.2\lib\app.jar
+C:\Program Files\JetBrains\JetBrains Rider 2024.1.2\lib\product.jar
+C:\Program Files\JetBrains\JetBrains Rider 2024.1.2\plugins\clouds-kubernetes\lib\clouds-kubernetes.jar
+C:\Program Files\JetBrains\JetBrains Rider 2024.1.2\plugins\DatabaseTools\lib\database-plugin.jar
+C:\Program Files\JetBrains\PyCharm 2024.1.1\jbr\bin\libcef.dll
+C:\Program Files\JetBrains\PyCharm 2024.1.1\lib\app-client.jar
+C:\Program Files\JetBrains\PyCharm 2024.1.1\lib\lib.jar
+C:\Program Files\JetBrains\PyCharm 2024.1.1\plugins\DatabaseTools\lib\database-plugin.jar
+C:\Program Files\LGHUB\lghub.exe
+C:\Program Files\SteelSeries\GG\SteelSeriesGGClient.exe
+C:\Program Files\SteelSeries\GG\resources\app.asar
+C:\Program Files (x86)\ASUS\ArmouryDevice\asus_framework.exe
+C:\Program Files (x86)\Common Files\VMware\InstallerCache\{F47C8797-293D-4702-A238-F1EF11F8A1B0}.msi
+C:\Program Files (x86)\InstallShield Installation Information\{36805427-5E52-4EE4-8306-50F4E3F28A3B}\MicrosoftEdgeWebView2RuntimeInstallerX64.exe
+C:\Program Files (x86)\Microsoft\Edge\Application\126.0.2592.61\msedge.dll
+C:\Program Files (x86)\Microsoft\EdgeCore\126.0.2592.61\msedge.dll
+C:\Program Files (x86)\Microsoft\EdgeWebView\Application\126.0.2592.61\msedge.dll
+C:\Program Files (x86)\Overwolf\0.251.2.1\libcef.dll
+C:\Program Files (x86)\Samsung\Samsung Data Migration\Magician\Samsung_Magician_installer.exe
+C:\Program Files (x86)\Samsung\Samsung Magician\SamsungMagician.exe
+C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\libcef.dll
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\data.unity3d
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\resources.resource
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\blocktextureatlases_assets_all.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\terraintextures_assets_all.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\automatic_assets_entities\bandits.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\automatic_assets_entities\lootcontainers.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\automatic_assets_entities\traders.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\automatic_assets_entities\trees.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\automatic_assets_entities\vehicles.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\automatic_assets_entities\zombies.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Addressables\Standalone\automatic_assets_other\items.bundle
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Bundles\umaplayer
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Worlds\PREGEN10k\dtm.raw
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Worlds\PREGEN10k\dtm_processed.raw
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Worlds\PREGEN8k\dtm.raw
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Data\Worlds\PREGEN8k\dtm_processed.raw
+C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\resources.assets
+C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\resources.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\resources.resource
+C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\sharedassets0.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\DSPGAME_Data\sharedassets0.resource
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level10
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level11
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level12
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level2
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level3
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level3.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level4
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level5
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level6
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level6.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level7
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level8
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\level9
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\resources.assets
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\resources.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets1.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets10.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets11.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets2.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets3.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets4.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets5.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets6.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets7.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets8.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\sharedassets9.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\StreamingAssets\LanguageModels\Arabic\am\final.mdl
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\StreamingAssets\LanguageModels\Arabic\graph\HCLG.fst
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\StreamingAssets\LanguageModels\Greek\graph\HCLG.fst
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\StreamingAssets\LanguageModels\Greek\other\el-gr-4g.gz
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\StreamingAssets\LanguageModels\Greek\rescore\G.carpa
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\StreamingAssets\LanguageModels\Swedish\graph\HCLG.fst
+C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia\Phasmophobia_Data\StreamingAssets\LanguageModels\Ukrainian\graph\HCLr.fst
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Binaries\Win64\SoTGame.exe
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_02a75cc1-1530-4bbd-bbc6-2e38a01f5c37-WindowsClient_P41.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_08cd94f2-ae8f-462d-bf09-a3928afc5d93-WindowsClient_P68.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_08d58fd0-80e0-49b7-bda8-898d7ca0b9ed-WindowsClient_P48.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_4cfc33b0-d748-40f7-a1f9-6f1801c26604-WindowsClient_P33.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_659d11e1-c4dc-405d-a169-aa1175445f6a-WindowsClient_P18.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_70c3c53d-75f2-40fd-9a9a-0f3473c9f830-WindowsClient_P69.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_7aab4c60-702f-4127-8f0a-7ddcbad9427e-WindowsClient_P69.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_83362db3-105c-42f1-aecb-f883eff38c56-WindowsClient_P57.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_94b0c990-4c1b-4b7b-9f7a-47f9e71bff60-WindowsClient_P24.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_9ab26386-4024-42de-b6e1-813d79cd0285-WindowsClient_P13.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_ad4a9904-4e33-4a03-a7bb-32a123434fc8-WindowsClient_P57.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_b43046c6-e3a3-4dc8-841d-c32015f5e7b8-WindowsClient_P70.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_c151c682-2a8a-4953-aa8a-95b0fa6d755a-WindowsClient_P48.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_cce9c72c-6d5b-40b9-82c7-294c4f46638f-WindowsClient_P67.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_d554d8cf-97a2-41dc-8fb9-e78d3e0d10d6-WindowsClient.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_dd845c1b-a448-4717-96f2-7174c2fe1c25-WindowsClient_P57.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_f4659e45-162f-4cef-bdda-c934f0f569e4-WindowsClient.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\Core_ff29ced3-9371-41d5-9ac0-c49bb035daaf-WindowsClient_P70.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\data-WindowsClient.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Athena\Content\Paks\wem-WindowsClient.pak
+C:\Program Files (x86)\Steam\steamapps\common\Sea of Thieves\Engine\Binaries\ThirdParty\CEF3\Win64\85.2.0+g94efef2+chromium-85.0.4183.26\Release\libcef.dll
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\GameAssembly.dll
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\resources.assets
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\resources.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets11.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets13.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets15.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets20.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets23.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets24.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets25.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets26.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets37.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets7.assets
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\sharedassets7.assets.resS
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\mutants.bank
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\sotf_amb_streamed.bank
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\sotf_music_intro.bank
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\sotf_music_radio.bank
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\sotf_music_radio_transceive.bank
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\streamed.bank
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\aa\StandaloneWindows64\bunkershared_assets__975ca5f9e7dd6c30aeeb8a7eff1ed7e1.bundle
+C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest_Data\StreamingAssets\aa\StandaloneWindows64\chopperleaveislandcutscene_assets__6f1839e8159122d5c25db77ec06c91f0.bundle
+C:\Program Files (x86)\Steam\steamapps\common\wallpaper_engine\bin\libcef.dll
+C:\Program Files (x86)\Steam\steamapps\common\wallpaper_engine\distribution\bin\libcef.dll
