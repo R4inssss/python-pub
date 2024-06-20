@@ -2,6 +2,14 @@
 #       learning tkinter to make a gui for a calculator
 
 from tkinter import *
+from tkinter import messagebox
+import random
+
+# ------------------------------------ Random Int + Window ------------------------------ #
+
+mynumber = random.randint(1, 10)
+print(mynumber)
+
 
 # window variable
 window = Tk()
@@ -14,7 +22,11 @@ window.geometry('500x400')
 # ------------------------------------ Windows Callable ------------------------------ #
 
 def btnOk_clicked():
-    print(spinNumber.get())
+    guess = int(spinNumber.get())
+    if guess == mynumber:
+        messagebox.showinfo(title='Congratulations!', message='You guessed the right number!')
+    else:
+        messagebox.showinfo(title='Wrong!', message='You guessed the wrong number!')
 
 
 def btnCancel_clicked():
