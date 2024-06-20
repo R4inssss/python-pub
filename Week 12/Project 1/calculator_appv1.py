@@ -3,6 +3,8 @@ from tkinter import messagebox
 import calculator_appv2
 
 
+# ------------------------------- Main ------------------------------- #
+
 class CalculatorApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -27,7 +29,7 @@ class CalculatorApp(tk.Tk):
         col = 0
         for text in button_texts:
             button = tk.Button(self, text=text, padx=20, pady=20, font=('Arial', 18),
-                               command=lambda t=text: self.on_button_click(t))
+                               command=lambda t=text: self.on_btn_click(t))
             # TODO: Create on button clicked function
             # button orientation to cardinal directions
             button.grid(row=row, column=col, sticky="nsew")
@@ -36,7 +38,26 @@ class CalculatorApp(tk.Tk):
                 col = 0
                 row += 1
 
-#            row += 1 # future planning for my functions
+    #            row += 1 # future planning for my functions
+
+    # ------------------------------- Functions ------------------------------- #
+
+    def on_btn_click(self, char):
+        if char == '=':
+            try:
+                self.expression = str(eval(self.expression))
+                self.entry.delete(0, tk.END)
+                self.entry.insert(tk.END, self.expression)
+            except:
+                self.entry.delete(0, tk.END)
+                self.entry.insert(tk.END, "Error")
+        else:
+            self.expression += str(char)
+            self.entry.delete(0, tk.END)
+            self.entry.insert(tk.END, self.expression)
+
+
+# ------------------------------- Call ------------------------------- #
 
 
 if __name__ == "__main__":
