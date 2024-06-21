@@ -30,7 +30,6 @@ class CalculatorApp(tk.Tk):
         for text in button_texts:
             button = tk.Button(self, text=text, padx=20, pady=20, font=('Arial', 18),
                                command=lambda t=text: self.on_btn_click(t))
-            # TODO: Create on button clicked function
             # button orientation to cardinal directions
             button.grid(row=row, column=col, sticky="nsew")
             col += 1
