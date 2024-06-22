@@ -13,7 +13,7 @@ datePattern = re.compile(r"""^(.*?) # We use the carat and the wildcard for all 
     (.*?)$                                # and then the ending wild card for all text after the date
     """, re.VERBOSE)
 
-for amerFilename in os.listdir('.'):
+for amerFilename in os.listdir(''):
     mo = datePattern.search(amerFilename)
     if mo is None:
         continue
@@ -25,7 +25,7 @@ for amerFilename in os.listdir('.'):
 
     euroFilename = beforePart + dayPart + monthPart + yearPart + afterPart
 
-    absWorkingDir = os.path.abspath('.')
+    absWorkingDir = os.path.abspath('')
     amerFilename = os.path.join(absWorkingDir, amerFilename)
     euroFilename = os.path.join(absWorkingDir, euroFilename)
 
