@@ -37,23 +37,47 @@ class CalculatorApp(tk.Tk):
                 col = 0
                 row += 1
 
-    #            row += 1 # future planning for my functions
+        # TODO: Buttons for statistics and clear
+        # Statistics Button GUI and call
+        stats_btn = tk.Button(self, text='Statistics', padx=20, pady=20, font=('Arial', 18),
+                              command=self.open_statistics_menu)
+        stats_btn.grid(row=row, column=0, columnspan=4, sticky="nsew")
+
+        row += 1  # There's probably a better way to make a new row, but I don't know how to yet :)
+        # Clear button GUI and call
+        clr_btn = tk.Button(self, text='Clear', padx=20, pady=20, font=('Arial', 18),
+                            command=self.clr_button)
+        clr_btn.grid(row=row, column=0, columnspan=4, sticky="nsew")
 
     # ------------------------------- Functions ------------------------------- #
 
+    # Function 1, event handler for input
     def on_btn_click(self, char):
         if char == '=':
             try:
                 self.expression = str(eval(self.expression))
                 self.entry.delete(0, tk.END)
                 self.entry.insert(tk.END, self.expression)
+
             except:
                 self.entry.delete(0, tk.END)
                 self.entry.insert(tk.END, "Error")
+
         else:
             self.expression += str(char)
             self.entry.delete(0, tk.END)
             self.entry.insert(tk.END, self.expression)
+
+    # Function 2, statistics button and menu
+    def open_statistics_menu(self):
+        stats_window = tk.Toplevel(self)
+        stats_window.title('Statistics')
+        stats_window.geometry('400x600')
+
+    # Function 3, clear button
+    def clr_button(self):
+        self.expression = ""
+        self.entry.delete(0, tk.END)
 
 
 # ------------------------------- Call ------------------------------- #
