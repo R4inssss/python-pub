@@ -43,12 +43,15 @@ def google_search(search_term):
             webbrowser.open(urlToOpen)
 
 
-# First thing I did, was created a small failsafe in case there were no command line arguments, and move these down
-if len(sys.argv) > 1:
-    search_term = ' '.join(sys.argv[1:])
-else:
-    print("Please enter a search term")
-    sys.exit()
+# Removed failsafe since input has to be validated below:
+
+# if len(sys.argv) > 1:
+#     search_term = ' '.join(sys.argv[1:])
+# else:
+#     print("Please enter a search term")
+#     sys.exit()
+
+# left this the same
 
 print('Would you like to search on google or pypi? (1 or 2)')
 answer = input('>>> ')
