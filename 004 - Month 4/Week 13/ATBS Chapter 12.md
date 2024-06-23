@@ -21,3 +21,43 @@ SyntaxError: unterminated string literal (detected at line 1)
 >>> weather.close()
 ```
 Always the small stuff that gets you
+
+Activity 2 we ran:
+```python
+>>> res = requests.get('https://nostarch.com')    
+>>> res.raise_for_status()
+>>> res
+<Response [200]>
+>>> noStarchSoup = bs4.BeautifulSoup(res.text, 'html.parser')
+>>> type(noStarchSoup)
+<class 'bs4.BeautifulSoup'>
+
+```
+We also did the following:
+```python
+<class 'bs4.BeautifulSoup'>
+>>> exampleFile = open('example.html')
+>>> exampleSoup = bs4.BeautifulSoup(exampleFile, 'html.parser')
+>>> type(exampleSoup)
+<class 'bs4.BeautifulSoup'>
+
+```
+Following this, we assigned the variable elems:
+```python
+>>> exampleFile = open('example.html')                                 
+>>> exampleSoup = bs4.BeautifulSoup(exampleFile.read(), 'html.parser')
+>>> elems = exampleSoup.select('#author') 
+>>> type(elems)
+<class 'list'>
+>>> len(elems)
+1
+>>> type(elems[0])
+<class 'bs4.element.Tag'>
+>>> str(elems[0])
+'<span id="author">Al Sweigart</span>'
+>>> elems[0].getText()
+'Al Sweigart'
+>>> elems[0].attrs    
+{'id': 'author'}
+
+```
