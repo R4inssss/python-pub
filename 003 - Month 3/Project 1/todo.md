@@ -1,11 +1,12 @@
 ## Regular Functions:
 
 Factorial button
-
 Cache system?
+Standardize inputs/simplify them for statistics module
 
 
 ## Addons:
+
 Statistics Button
 Clear button
 Graph button
