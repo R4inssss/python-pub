@@ -275,7 +275,7 @@ class CV:
         print(f'This is your mean: {stats_summary["mean"]}')
         print(f'This is your n: {stats_summary["n"]}')
         print(f'This is your coefficient variation: {stats_summary["cv"]}%')
-        print(f'This is your sum of x: :{stats_summary["sum x"]}')
+        print(f'This is your sum of x: {stats_summary["sum x"]}')
 
 
 # 6 Creating standard z using std deviation of sigma(xbar) distribution
