@@ -102,3 +102,113 @@ Read port: 56184
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.metafilter.com."
 1719279135141	Marionette	INFO	Stopped listening on port 56184
 Dynamically enable window occlusion 1
+1719414176392	geckodriver	INFO	Listening on 127.0.0.1:15975
+1719414179423	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofile2CmQ37"
+1719414192489	geckodriver	INFO	Listening on 127.0.0.1:16026
+1719414195548	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofileSg76Bt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1719414195845	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1719414196053	Marionette	INFO	Listening on port 16038
+Read port: 16038
+1719414196082	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js, line 3: Script terminated by timeout at:
+fix@https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js:3:9075
+dispatch@https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js:3:7035
+add/r.handle@https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js:3:5620
+
+1719414208252	Marionette	INFO	Stopped listening on port 16038
+Dynamically enable window occlusion 1
+1719414285991	geckodriver	INFO	Listening on 127.0.0.1:16115
+1719414289081	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofile9PzreK"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1719414289371	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1719414289581	Marionette	INFO	Listening on port 16126
+Read port: 16126
+1719414289657	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: BackupService: "Failed to measure for resource: miscellaneous" (new NotFoundError("Could not stat `C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofile9PzreK\\storage\\permanent\\chrome\\idb\\2823318777ntouromlalnodry--naod.sqlite-journal': file does not exist (NS_ERROR_FILE_NOT_FOUND)", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1719414319868	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: "Error while calling actor 'inspector's method 'getHighlighterByType'" "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIDOMWindowUtils.getScrollbarSize]"
+console.error: ({})
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+JavaScript error: resource://devtools/client/fronts/inspector.js, line 148: Error: The target doesn't support creating highlighters by types or BoxModelHighlighter is unknown
+console.error: "Can't start recording from event type: " "paste"
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VKtwqYIMw_jEtcsYEdk2t0uWx1X5nCbHNvrRSJpikmk.js line 2 > eval line 1116 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VKtwqYIMw_jEtcsYEdk2t0uWx1X5nCbHNvrRSJpikmk.js line 2 > eval line 2915 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/VKtwqYIMw_jEtcsYEdk2t0uWx1X5nCbHNvrRSJpikmk.js line 2 > eval line 916 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: "buildList failed: " ({})
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ, line 614: Script terminated by timeout at:
+ca.rh@https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ:614:491
+get@https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ:613:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ:613:87
+ca.Ik/c/<@https://www.googletagmanager.com/gtag/js?id=G-WCZ03SZFCQ:613:412
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 569: NotFoundError: No such JSProcessActor 'DevToolsProcess'
+1719415066515	Marionette	INFO	Stopped listening on port 16126
+Dynamically enable window occlusion 1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1719415111048	geckodriver	INFO	Listening on 127.0.0.1:16569
+1719415114096	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofileS36J3U"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1719415114391	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1719415114597	Marionette	INFO	Listening on port 16580
+Read port: 16580
+1719415114678	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1719415123461	Marionette	INFO	Stopped listening on port 16580
+Dynamically enable window occlusion 1
+1719415797243	geckodriver	INFO	Listening on 127.0.0.1:16924
+1719415800287	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofileGWznU0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1719415800586	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1719415800795	Marionette	INFO	Listening on port 16935
+Read port: 16935
+1719415800912	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1719415809345	Marionette	INFO	Stopped listening on port 16935
+Dynamically enable window occlusion 1
+1719415853012	geckodriver	INFO	Listening on 127.0.0.1:17001
+1719415856060	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofile5qYjpu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1719415856367	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1719415856570	Marionette	INFO	Listening on port 17013
+Read port: 17013
+1719415856694	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AS5LTARff4roU7TGXbjQ6iBRohlr5XpsZEraS37MIgoagE0ckFCCJ8qaRziaUrZpiJo6iVJKtFq1&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1107070252%3A1719415857041710&ddm=0 line 84 > injectedScript line 2 > eval line 6601 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.zzp5aG8rl3Q.es5.O/ck=boq-identity.AccountsSignInUi.W4tccE-tPLI.L.F4.O/am=HwCD6J6jAIjnnAMfoBQIGQAAAAAAQAAAsAyQGQ/d=1/exm=AvtSve,CMcBD,E87wgc,EFQ78c,EN3i8d,F6sNGb,Fndnac,I6YDgd,IZT63,K0PMbc,K1ZKnb,KUM7Z,L1AAkb,L9OGUe,LDQI,LEikZe,MpJwZc,NOeYWe,NTMZac,O6y8ed,PHUIyb,PrPYRd,Rkm0ef,SCuOPb,SD8Jgb,STuCOe,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,YHI3We,YTxL4,YgOFye,ZakeSe,_b,_tp,aC1iue,aW3pY,b3kMqb,bSspM,bTi8wc,byfTOb,eVCnO,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lRrMHd,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,njlZCf,oLggrd,pxq3x,qPYxq,qPfo0c,qmdT9,r1n9ec,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vvMGie,ws9Tlc,xBaz7b,xQtZb,xiZRqc,yRXbo,ywOR5c,z0u0L,zbML3c,ziZ8Mc,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlEwWNFzABmi0kerrxM_e48jH52CJg/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:F6sNGb;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:XVMNvd;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;UpnZUd:nnwwYc;XdiAjb:NLiXbe;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:vfuNJf;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:NTMZac;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;vNjB7d:YTxL4;wR5FRb:siKnQd;yxTchf:KUM7Z/m=RqjULd, line 17: Script terminated by timeout at:
+e@https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.zzp5aG8rl3Q.es5.O/ck=boq-identity.AccountsSignInUi.W4tccE-tPLI.L.F4.O/am=HwCD6J6jAIjnnAMfoBQIGQAAAAAAQAAAsAyQGQ/d=1/exm=AvtSve,CMcBD,E87wgc,EFQ78c,EN3i8d,F6sNGb,Fndnac,I6YDgd,IZT63,K0PMbc,K1ZKnb,KUM7Z,L1AAkb,L9OGUe,LDQI,LEikZe,MpJwZc,NOeYWe,NTMZac,O6y8ed,PHUIyb,PrPYRd,Rkm0ef,SCuOPb,SD8Jgb,STuCOe,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,YHI3We,YTxL4,YgOFye,ZakeSe,_b,_tp,aC1iue,aW3pY,b3kMqb,bSspM,bTi8wc,byfTOb,eVCnO,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lRrMHd,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,njlZCf,oLggrd,pxq3x,qPYxq,qPfo0c,qmdT9,r1n9ec,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vvMGie,ws9Tlc,xBaz7b,xQtZb,xiZRqc,yRXbo,ywOR5c,z0u0L,zbML3c,ziZ8Mc,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlEwWNFzABmi0kerrxM_e48jH52CJg/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:F6sNGb;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:XVMNvd;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;UpnZUd:nnwwYc;XdiAjb:NLiXbe;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:vfuNJf;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:NTMZac;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;vNjB7d:YTxL4;wR5FRb:siKnQd;yxTchf:KUM7Z/m=RqjULd:17:33
+REa/<@https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.zzp5aG8rl3Q.es5.O/ck=boq-identity.AccountsSignInUi.W4tccE-tPLI.L.F4.O/am=HwCD6J6jAIjnnAMfoBQIGQAAAAAAQAAAsAyQGQ/d=1/exm=AvtSve,CMcBD,E87wgc,EFQ78c,EN3i8d,F6sNGb,Fndnac,I6YDgd,IZT63,K0PMbc,K1ZKnb,KUM7Z,L1AAkb,L9OGUe,LDQI,LEikZe,MpJwZc,NOeYWe,NTMZac,O6y8ed,PHUIyb,PrPYRd,Rkm0ef,SCuOPb,SD8Jgb,STuCOe,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,YHI3We,YTxL4,YgOFye,ZakeSe,_b,_tp,aC1iue,aW3pY,b3kMqb,bSspM,bTi8wc,byfTOb,eVCnO,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lRrMHd,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,njlZCf,oLggrd,pxq3x,qPYxq,qPfo0c,qmdT9,r1n9ec,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vvMGie,ws9Tlc,xBaz7b,xQtZb,xiZRqc,yRXbo,ywOR5c,z0u0L,zbML3c,ziZ8Mc,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlEwWNFzABmi0kerrxM_e48jH52CJg/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:F6sNGb;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:XVMNvd;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;UpnZUd:nnwwYc;XdiAjb:NLiXbe;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:vfuNJf;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:NTMZac;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;vNjB7d:YTxL4;wR5FRb:siKnQd;yxTchf:KUM7Z/m=RqjULd:18:30
+c@https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.zzp5aG8rl3Q.es5.O/ck=boq-identity.AccountsSignInUi.W4tccE-tPLI.L.F4.O/am=HwCD6J6jAIjnnAMfoBQIGQAAAAAAQAAAsAyQGQ/d=1/exm=AvtSve,CMcBD,E87wgc,EFQ78c,EN3i8d,F6sNGb,Fndnac,I6YDgd,IZT63,K0PMbc,K1ZKnb,KUM7Z,L1AAkb,L9OGUe,LDQI,LEikZe,MpJwZc,NOeYWe,NTMZac,O6y8ed,PHUIyb,PrPYRd,Rkm0ef,SCuOPb,SD8Jgb,STuCOe,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,YHI3We,YTxL4,YgOFye,ZakeSe,_b,_tp,aC1iue,aW3pY,b3kMqb,bSspM,bTi8wc,byfTOb,eVCnO,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lRrMHd,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,njlZCf,oLggrd,pxq3x,qPYxq,qPfo0c,qmdT9,r1n9ec,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vvMGie,ws9Tlc,xBaz7b,xQtZb,xiZRqc,yRXbo,ywOR5c,z0u0L,zbML3c,ziZ8Mc,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlEwWNFzABmi0kerrxM_e48jH52CJg/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:F6sNGb;EmZ2Bf:zr1jrb;Erl4fe:FloWmf;JsbNhc:Xd8iUd;LBgRLc:XVMNvd;Me32dd:MEeYgc;NPKaK:PVlQOd;NSEoX:lazG7b;Oj465e:KG2eXe;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;UpnZUd:nnwwYc;XdiAjb:NLiXbe;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;eBAeSb:zbML3c;iFQyKf:vfuNJf;io8t5d:yDVVkb;kMFpHd:OTA3Ae;nAFL3:NTMZac;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qddgKe:xQtZb;sP4Vbe:VwDzFe;uY49fb:COQbmf;ul9GGd:VDovNc;vNjB7d:YTxL4;wR5FRb:siKnQd;yxTchf:KUM7Z/m=RqjULd:13:3183
+
+1719415862596	Marionette	INFO	Stopped listening on port 17013
+Dynamically enable window occlusion 1
