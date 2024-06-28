@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-import statisticsProgramv7
+import statisticsProgramv7 as StaPro
 
 
 # ------------------------------- Main ------------------------------- #
@@ -74,10 +74,48 @@ class CalculatorApp(tk.Tk):
         stats_window.title('Statistics')
         stats_window.geometry('400x600')
 
+        # Creating a frame, I wanted to make a listbox and a scrollbar for my statistics module
+        frame = tk.Frame(stats_window)
+        # padding, 20, 10, both ugly so went with 5
+        frame.pack(pady=5, padx=5, fill=tk.BOTH, expand=True)
+
+        # scrollbar, iterated on the frame and refactor kind of filled the second part, if it works, it works!
+        scrollbar = tk.Scrollbar(frame)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        # listbox
+        listbox = tk.Listbox(frame, yscrollcommand=scrollbar.set, selectmode=tk.SINGLE)
+        listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        # Scrollbar Config
+        scrollbar.config(command=listbox.yview)
+
+        # my stats class (WIP, DOES NOT WORK)
+
+        listbox.bind('<UP>', lambda event: self.navigate_listbox(listbox, -1))
+        listbox.bind('<DOWN>', lambda event: self.navigate_listbox(listbox, 1))
+
+        # Something of an entry menu
+
     # Function 3, clear button
     def clr_button(self):
         self.expression = ""
         self.entry.delete(0, tk.END)
+
+    # Function 4, Listbox navigation
+    def navigate_listbox(self, listbox, direction):
+        current_selection = listbox.curselection()
+        if current_selection:
+            new_index = current_selection[0] + direction
+            if 0 <= new_index < listbox.size():
+                listbox.selection_clear(0, tk.END)
+                listbox.selection_set(new_index)
+                listbox.activate(new_index)
+                listbox.see(new_index)
+        else:
+            listbox.selection_set(0)
+            listbox.activate(0)
+            listbox.see(0)
 
 
 # ------------------------------- Call ------------------------------- #
