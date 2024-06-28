@@ -14,6 +14,7 @@ import getpass
 def cliemail():
     email = input('Enter your email: ')
     password = getpass.getpass('Enter your password: ')
+    recipient = input('Enter recipient email: ')
     browser = webdriver.Firefox()
     browser.get('https://mail.google.com')
 
@@ -27,9 +28,22 @@ def cliemail():
     passwordElem.send_keys(password)
     passwordElem.send_keys(Keys.RETURN)
 
+    # Find Compose Button
+    composeElem = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.CSS_SELECTOR, '.T-I-KE'))
+    )
 
-# Fine Compose Button
-# Find email field
+    composeElem.send_keys(Keys.RETURN)
+
+    # Find email field
+    toElem = WebDriverWait(browser, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id=":b6"]'))
+    )
+    toElem.send_keys(recipient)
+
+
+
+
 # Find subject field
 # Find Message body
 # Find send button
