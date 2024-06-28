@@ -18,10 +18,12 @@ def cliemail():
     browser = webdriver.Firefox()
     browser.get('https://mail.google.com')
 
+    # Email
     emailElem = browser.find_element(By.ID, 'identifierId')
     emailElem.send_keys(email)
     emailElem.send_keys(Keys.RETURN)
 
+    # Password
     passwordElem = WebDriverWait(browser, 10).until(
         EC.visibility_of_element_located((By.NAME, 'Passwd'))
     )
