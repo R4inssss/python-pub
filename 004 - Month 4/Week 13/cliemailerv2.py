@@ -68,9 +68,9 @@ def cliemail():
         )
         toSend.send_keys(Keys.RETURN)
 
-        time.sleep(5)
+        time.sleep(5)  # change int here if you want faster loops
 
-        if i >= 10:
+        if i >= 10:  # change int here if you want to iterate this by (i)th amount
             break
 
 
