@@ -12,40 +12,28 @@ import time
 
 
 def keys():
-
     browser = webdriver.Firefox()
     browser.get('https://gabrielecirulli.github.io/2048/')
+    toBody = WebDriverWait(browser, 10).until(
+        EC.visibility_of_element_located((By.CSS_SELECTOR, 'body'))
+    )
 
     while True:
-        toUp = WebDriverWait(browser, 10).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, 'body'))
-        )
-        toUp.send_keys(Keys.UP)
-        time.sleep(0.5)
-
-        toRight = WebDriverWait(browser, 10).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, 'body'))
-        )
-        toRight.send_keys(Keys.RIGHT)
-        time.sleep(0.5)
-
-        toDown = WebDriverWait(browser, 10).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, 'body'))
-        )
-        toDown.send_keys(Keys.DOWN)
-        time.sleep(0.5)
-
-        toLeft = WebDriverWait(browser, 10).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, 'body'))
-        )
-        toLeft.send_keys(Keys.LEFT)
-        time.sleep(0.5)
-
-        toScroll = WebDriverWait(browser, 10).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, 'body'))
-        )
-        toScroll.send_keys(Keys.PAGE_UP)
+        toBody.send_keys(Keys.UP)
         time.sleep(0.3)
+        toBody.send_keys(Keys.PAGE_UP)
+
+        toBody.send_keys(Keys.RIGHT)
+        time.sleep(0.3)
+        toBody.send_keys(Keys.PAGE_UP)
+
+        toBody.send_keys(Keys.DOWN)
+        time.sleep(0.3)
+        toBody.send_keys(Keys.PAGE_UP)
+
+        toBody.send_keys(Keys.LEFT)
+        time.sleep(0.3)
+        toBody.send_keys(Keys.PAGE_UP)
 
 
 keys()

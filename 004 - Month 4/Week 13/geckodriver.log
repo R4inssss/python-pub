@@ -1538,3 +1538,62 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1719669645581	geckodriver	INFO	Listening on 127.0.0.1:29881
+1719669648642	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofiletcKuJX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1719669648900	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1719669648987	Marionette	INFO	Listening on port 29893
+Read port: 29893
+1719669649079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1719669650172	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://api.fouanalytics.com/s/pp.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://go.ezodn.com/beardeddragon/wyvern.js?cb=127, line 38: unreachable code after return statement
+JavaScript warning: https://go.ezodn.com/beardeddragon/wyvern.js?cb=127, line 38: unreachable code after return statement
+JavaScript error: https://go.ezodn.com/beardeddragon/iguana.js?cb=371, line 2: ReferenceError: ReportingObserver is not defined
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EwGoFmJh85jiKfF-1zVyLpKT-mfRa9zDiFbQBwafAqI.js line 2 > eval line 2672 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: javascript:void;, line 1: SyntaxError: expected expression, got ';'
+JavaScript error: https://cdn.flashtalking.com/pageFold/ftpagefold_v4.7.2.js, line 1: TypeError: IntersectionObserver.observe: Argument 1 is not an object.
+JavaScript error: https://ajs-assets.ftstatic.com/ftUtils.js?placementId=8400993&creativeId=4720012&cb=1719261240000 line 1 > Function, line 5: TypeError: b is undefined
+1719669657705	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: javascript:void;, line 1: SyntaxError: expected expression, got ';'
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EwGoFmJh85jiKfF-1zVyLpKT-mfRa9zDiFbQBwafAqI.js line 2 > eval line 2492 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1719669679789	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EwGoFmJh85jiKfF-1zVyLpKT-mfRa9zDiFbQBwafAqI.js line 2 > eval line 5546 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://go.ezodn.com/tardisrocinante/vitals.js?gcb=195-6&cb=4, line 1: Script terminated by timeout at:
+y/<@https://go.ezodn.com/tardisrocinante/vitals.js?gcb=195-6&cb=4:1:2324
+t@https://go.ezodn.com/tardisrocinante/vitals.js?gcb=195-6&cb=4:1:2199
+
+1719669694709	Marionette	INFO	Stopped listening on port 29893
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 47: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1719669791798	geckodriver	INFO	Listening on 127.0.0.1:30444
+1719669794842	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofilemtWSPw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1719669795161	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1719669795271	Marionette	INFO	Listening on port 30455
+Read port: 30455
+1719669795439	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1719669796617	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://go.ezodn.com/beardeddragon/wyvern.js?cb=127, line 38: unreachable code after return statement
+JavaScript warning: https://api.fouanalytics.com/s/pp.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://go.ezodn.com/beardeddragon/wyvern.js?cb=127, line 38: unreachable code after return statement
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EwGoFmJh85jiKfF-1zVyLpKT-mfRa9zDiFbQBwafAqI.js line 2 > eval line 6857 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://go.ezodn.com/beardeddragon/iguana.js?cb=371, line 2: ReferenceError: ReportingObserver is not defined
+JavaScript error: javascript:void;, line 1: SyntaxError: expected expression, got ';'
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EwGoFmJh85jiKfF-1zVyLpKT-mfRa9zDiFbQBwafAqI.js line 2 > eval line 4643 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1719669802839	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
