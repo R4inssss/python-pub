@@ -20,58 +20,63 @@ def cliemail():
     body = input('Enter your message: ')
     browser = webdriver.Firefox()
     browser.get('https://mail.google.com')
-    i = 0
+    i = 0  # subject counter
 
-    # Email
-    emailElem = browser.find_element(By.ID, 'identifierId')
-    emailElem.send_keys(email)
-    emailElem.send_keys(Keys.RETURN)
+    try:
+        # Email
+        emailElem = browser.find_element(By.ID, 'identifierId')
+        emailElem.send_keys(email)
+        emailElem.send_keys(Keys.RETURN)
 
-    # Password
-    passwordElem = WebDriverWait(browser, 10).until(
-        EC.visibility_of_element_located((By.NAME, 'Passwd'))
-    )
-    passwordElem.send_keys(password)
-    passwordElem.send_keys(Keys.RETURN)
-
-    while True:
-        # Find Compose Button
-        composeElem = WebDriverWait(browser, 10).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, '.T-I-KE'))
+        # Password
+        passwordElem = WebDriverWait(browser, 10).until(
+            EC.visibility_of_element_located((By.NAME, 'Passwd'))
         )
+        passwordElem.send_keys(password)
+        passwordElem.send_keys(Keys.RETURN)
 
-        composeElem.send_keys(Keys.RETURN)
+        while i <= 10:
+            # Find Compose Button
+            composeElem = WebDriverWait(browser, 10).until(
+                EC.visibility_of_element_located((By.CSS_SELECTOR, '.T-I-KE'))
+            )
 
-        # Find email field
-        toElem = WebDriverWait(browser, 10).until(
-            EC.element_to_be_clickable((By.XPATH, '//input[@aria-label="To recipients"]'))
-        )
-        toElem.send_keys(recipient)
+            composeElem.send_keys(Keys.RETURN)
 
-        # Find subject field
-        toSub = WebDriverWait(browser, 10).until(
-            EC.element_to_be_clickable((By.NAME, 'subjectbox'))
-        )
-        toSub.send_keys(subject + str(i))
-        i += 1
+            # Find email field
+            toElem = WebDriverWait(browser, 10).until(
+                EC.element_to_be_clickable((By.XPATH, '//input[@aria-label="To recipients"]'))
+            )
+            toElem.send_keys(recipient)
 
-        # Find Message body
-        toBody = WebDriverWait(browser, 10).until(
-            EC.element_to_be_clickable((By.XPATH, '//div[@aria-label="Message Body"]'))
-        )
-        toBody.send_keys(body)
+            # Find subject field
+            toSub = WebDriverWait(browser, 10).until(
+                EC.element_to_be_clickable((By.NAME, 'subjectbox'))
+            )
+            toSub.send_keys(subject + str(i))
 
-        # Find send button
+            # Find Message body
+            toBody = WebDriverWait(browser, 10).until(
+                EC.element_to_be_clickable((By.XPATH, '//div[@aria-label="Message Body"]'))
+            )
+            toBody.send_keys(body)
 
-        toSend = WebDriverWait(browser, 10).until(
-            EC.element_to_be_clickable((By.XPATH, '//div[@role="button" and text()="Send"]'))
-        )
-        toSend.send_keys(Keys.RETURN)
+            # Find send button
 
-        time.sleep(5)  # change int here if you want faster loops
+            toSend = WebDriverWait(browser, 10).until(
+                EC.element_to_be_clickable((By.XPATH, '//div[@role="button" and text()="Send"]'))
+            )
+            toSend.send_keys(Keys.RETURN)
 
-        if i >= 10:  # change int here if you want to iterate this by (i)th amount
-            break
+            time.sleep(5)  # change int here if you want faster loops
+
+            i += 1  # moved for clarity, incremental counter of loop iterated through subject field
+
+    except Exception as e:
+        print(f'Error: {e}')
+    finally:
+        browser.quit()
+        print('Browser closed, your spam has been executed!')
 
 
 cliemail()
