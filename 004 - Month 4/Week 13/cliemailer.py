@@ -73,7 +73,6 @@ cliemail()
 #     print(password)
 #     print(type(password))
 #
-#
 # test_pass()
 
 # Userid variable
