@@ -4,8 +4,6 @@
 #       methinks it is like a weasel
 import random
 
-import random
-
 
 def generateOne(strlen):
     alphabet = 'abcdefghijklmnopqrstuvwxyz '
