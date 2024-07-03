@@ -1,0 +1,3 @@
+#! python3
+
+# GITHUB COMMIT TO FIX SUDO ERRORS>!>!>!>
