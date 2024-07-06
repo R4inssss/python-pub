@@ -3,9 +3,9 @@ from fastapi.params import Body
 from pydantic import BaseModel
 from typing import Optional
 from random import randrange
-
-
-
+import psycopg2
+from psycopg2.extras import RealDictCursor
+import time
 
 app = FastAPI()
 
@@ -14,11 +14,23 @@ class Post(BaseModel):
     title: str
     content: str
     published: bool = True
-    rating: Optional[int] = None
 
 
 my_posts = [{"title": "title of post 1", "content": "content of post 1", "id": 1},
             {"title": "favorite foods", "content": "I like pizza", "id": 2}]
+
+while True:
+    try:
+        conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres',  # I know hardcoding bad
+                                password='password123', cursor_factory=RealDictCursor)  # Will change in future
+        cursor = conn.cursor()
+        print("Connected to PostgreSQL")
+        break
+    except Exception as e:
+        print("Failed to connect to PostgreSQL")
+        print(e)
+        time.sleep(2)
+
 
 
 def find_post(id):
@@ -34,7 +46,9 @@ def hello():
 
 @app.get("/posts")
 def get_posts():
-    return {"data": my_posts}
+    cursor.execute("""SELECT * FROM posts""")
+    posts = cursor.fetchall()
+    return {"data": posts}
 
 
 @app.post("/posts", status_code=status.HTTP_201_CREATED)
@@ -46,7 +60,7 @@ def create_posts(post: Post):
 
 
 @app.get("/posts/{id}")
-def get_post(id:int):
+def get_post(id: int):
     post = find_post(int(id))
     if not post:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
@@ -70,6 +84,7 @@ def delete_post(id: int):
     my_posts.pop(index)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
+
 @app.put("/posts/{id}")
 def update_post(id: int, post: Post):
     index = find_index_post(id)
@@ -81,4 +96,4 @@ def update_post(id: int, post: Post):
     post_dict = post.dict()
     post_dict['id'] = id
     my_posts[index] = post_dict
-    return{"data": post_dict}
+    return {"data": post_dict}
