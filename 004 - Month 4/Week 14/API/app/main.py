@@ -64,7 +64,7 @@ def create_posts(post: Post):
 # Get one post
 @app.get("/posts/{id}")
 def get_post(id: int):
-    cursor.execute("""SELECT * FROM posts WHERE id = %s """, (str(id),))
+    cursor.execute("""SELECT * FROM posts WHERE id = %s """, (str(id), None))  # Passing null for a parameter
     post = cursor.fetchone()
     if not post:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
@@ -81,7 +81,7 @@ def find_index_post(id):
 # Delete posts
 @app.delete("/posts/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_post(id: int):
-    cursor.execute("""DELETE FROM posts WHERE id = %s RETURNING *""", (str(id),))
+    cursor.execute("""DELETE FROM posts WHERE id = %s RETURNING *""", (str(id), None))
     deleted_post = cursor.fetchone()
     conn.commit()
 

@@ -1913,3 +1913,21 @@ _.q3b.prototype.wa/this.ha<@https://mail.google.com/_/scs/mail-static/_/js/k=gma
 sie.prototype.handleEvent@https://mail.google.com/_/scs/mail-static/_/js/k=gmail.main.en.D0bIbnz36tg.es5.O/am=JgwAAACA_u-dv8LYQUEAgAD764H_zqVtGAEGnHhIEAlIArQ7IJMC_r96fTeoIp8fkACAAE7zqDn0eAAs5RAAAAQAsGK4DAUAAAAAAAAAAAAAAAAAAABcLYA/d=1/exm=a,b/ed=1/im=1/dg=0/br=1/wt=1/rs=AHGWq9DjL_kVcRc1verswa3feAJE2dZUKA/cb=loaded_2/m=m,m_i,i20jfd,lKrWxc,hkjXJ,gYOl6d,HXLjIb,Ng2pOb,fYVVAd,dwi4A,DL8jZe,xaQcye,J41knb,oRmHt,E1P0kd,X3h7x,pE92lb,v2eEBc,lLhY8:1517:352
 
 Dynamically enable window occlusion 1
+1720373806958	geckodriver	INFO	Listening on 127.0.0.1:1343
+1720373809996	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Peter\\AppData\\Local\\Temp\\rust_mozprofilehnEAVS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1720373810302	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1720373810382	Marionette	INFO	Listening on port 1354
+Read port: 1354
+1720373810491	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AdF4I75nK5aI7P4090LY-Nn5hxd8mI0KK4M95s91-JD-IHM7gBHlM71xqFp1RYzCSWxB8znneDWguw&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1577766708%3A1720373811811214&ddm=0 line 84 > injectedScript line 2 > eval line 1936 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AdF4I75nK5aI7P4090LY-Nn5hxd8mI0KK4M95s91-JD-IHM7gBHlM71xqFp1RYzCSWxB8znneDWguw&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1577766708%3A1720373811811214&ddm=0 line 84 > injectedScript line 2 > eval line 2693 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://mail.google.com."
+JavaScript warning: https://www.google.com/js/bg/DoQ2wXIjnGHkH0sSj0NdmCSng2yxPl24qaaxuSxA0fc.js line 2 > eval line 5237 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1720373840457	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Exiting due to channel error.
