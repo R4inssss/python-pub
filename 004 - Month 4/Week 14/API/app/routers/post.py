@@ -5,11 +5,14 @@ from ..database import get_db
 from typing import List
 
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/posts",
+    tags=["Posts"]
+)
 
 
 # Find all posts
-@router.get("/posts", response_model=List[schemas.Post])
+@router.get("/", response_model=List[schemas.Post])
 def get_posts(db: Session = Depends(get_db)):
     posts = db.query(models.Post).all()
     # cursor.execute("""SELECT * FROM posts""")
@@ -18,7 +21,7 @@ def get_posts(db: Session = Depends(get_db)):
 
 
 # Create posts
-@router.post("/posts", status_code=status.HTTP_201_CREATED, response_model=schemas.Post)
+@router.post("/", status_code=status.HTTP_201_CREATED, response_model=schemas.Post)
 def create_posts(post: schemas.PostCreate, db: Session = Depends(get_db)):
     # cursor.execute("""INSERT INTO posts (title, content, published) VALUES (%s, %s, %s) RETURNING *""",
     #                (post.title, post.content, post.published))
@@ -33,10 +36,8 @@ def create_posts(post: schemas.PostCreate, db: Session = Depends(get_db)):
 
 
 # Get one post
-@router.get("/posts/{id}", response_model=schemas.Post)
+@router.get("/{id}", response_model=schemas.Post)
 def get_post(id: int, db: Session = Depends(get_db)):
-    # cursor.execute("""SELECT * FROM posts WHERE id = %s """, (str(id), None))  # Passing null for a parameter
-    # post = cursor.fetchone()
 
     post = db.query(models.Post).filter(models.Post.id == id).first()  # equivalent of doing a where
 
@@ -46,18 +47,10 @@ def get_post(id: int, db: Session = Depends(get_db)):
     return post
 
 
-# def find_index_post(id):
-#     for i, p in enumerate(my_posts):
-#         if p["id"] == id:
-#             return i
-
 
 # Delete posts
-@router.delete("/posts/{id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_post(id: int, db: Session = Depends(get_db)):
-    # cursor.execute("""DELETE FROM posts WHERE id = %s RETURNING *""", (str(id), None))
-    # deleted_post = cursor.fetchone()
-    # conn.commit()
 
     post = db.query(models.Post).filter(models.Post.id == id)
     if post.first() == None:
@@ -69,12 +62,8 @@ def delete_post(id: int, db: Session = Depends(get_db)):
 
 
 # Update posts
-@router.put("/posts/{id}", response_model=schemas.Post)
+@router.put("/{id}", response_model=schemas.Post)
 def update_post(id: int, updated_post: schemas.PostCreate, db: Session = Depends(get_db)):
-    # cursor.execute("""UPDATE posts SET title = %s, content = %s, published = %s WHERE id = %s RETURNING * """,
-    #                (post.title, post.content, post.published, str(id),))
-    # updated_post = cursor.fetchone()
-    # conn.commit()
     post_query = db.query(models.Post).filter(models.Post.id == id)
     post = post_query.first()
     post_query.update(updated_post.dict(), synchronize_session=False)
