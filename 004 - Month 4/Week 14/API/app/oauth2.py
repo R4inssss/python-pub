@@ -15,14 +15,6 @@ ALGORITHM = 'HS256'
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 
-# def create_access_token(data: dict):  # here, data is our payload
-#     to_encode = data.copy()
-#     expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-#     to_encode.update({'exp': expire})  # Here, JWT is telling when it expires
-#     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)  # Pass our data and use jwt.encode method
-#
-#     return encoded_jwt
-
 def create_access_token(data: dict):
     to_encode = data.copy()
     to_encode['user_id'] = str(to_encode['user_id'])
