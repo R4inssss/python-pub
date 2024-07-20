@@ -4,8 +4,10 @@ from sqlalchemy.orm import sessionmaker
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import time
+from .config import settings
 
-SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:password123@localhost/fastapi'  # Teehee password
+SQLALCHEMY_DATABASE_URL = (f'postgresql://{settings.database_username}:{settings.database_password}'
+                           f'@{settings.database_hostname}:{settings.database_port}/{settings.database_name}')
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -23,8 +25,8 @@ def get_db():
 
 # while True:
 #     try:
-#         conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres',  # I know hardcoding bad
-#                                 password='password123', cursor_factory=RealDictCursor)  # Will change in future
+#         conn = psycopg2.connect(host=f'{}', database=f'{}', user=f'{}',
+#                                 password=f'{}', cursor_factory=RealDictCursor)
 #         cursor = conn.cursor()
 #         print("Connected to PostgreSQL")
 #         break
