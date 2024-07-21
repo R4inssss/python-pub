@@ -5,6 +5,3 @@
 __pycache__
 .env
 !/004 - Month 4/Week 14/API/app/mainbackup.py
-!/004 - Month 4/Week 14/API/alembic.ini
-!/004 - Month 4/Week 14/API/alembic/env.py
-/004 - Month 4/Week 14/API/alembic/env.py
