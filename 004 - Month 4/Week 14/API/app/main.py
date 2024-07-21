@@ -10,7 +10,7 @@ from .config import settings
 
 print(settings.database_username)
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 app.include_router(post.router)
