@@ -33,7 +33,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def hello():
-    return {"message": "welcome to API"}
+    return {"message": "Heroku Test"}
 
 
 # ============== Debug Code ==================== #
