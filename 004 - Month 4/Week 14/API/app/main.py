@@ -33,7 +33,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def hello():
-    return {"message": "Volume Bind with :read only"}
+    return {"message": "Volume Bind with tags"}
 
 
 # ============== Debug Code ==================== #
