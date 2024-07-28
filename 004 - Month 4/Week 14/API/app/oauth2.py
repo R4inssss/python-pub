@@ -20,7 +20,7 @@ def create_access_token(data: dict):
     to_encode = data.copy()
     to_encode['user_id'] = str(to_encode['user_id'])
 
-    print(f"Data to be encoded in token: {to_encode}")  # Debug code, will remove as needed
+    # print(f"Data to be encoded in token: {to_encode}")  # Debug code, will remove as needed
 
     expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     to_encode.update({"exp": expire})
@@ -32,16 +32,15 @@ def verify_access_token(token: str, credentials_exception):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         id: str = payload.get("user_id")
-        print(f"Payload: {payload}")
-        print(f"ID extracted from token: {id}, Type: {type(id)}")  # Debug code
+        #print(f"Payload: {payload}")
+        #print(f"ID extracted from token: {id}, Type: {type(id)}")  # Debug code
         if id is None:
             raise credentials_exception
-        print(f"ID extracted from token: {id}, Type: {type(id)}")  # Debug code
+        #print(f"ID extracted from token: {id}, Type: {type(id)}")  # Debug code
         token_data = schemas.TokenData(id=id)
     except JWTError as e:
         print(f"JWTError: {e}")  # Print the JWTError if it occurs
         raise credentials_exception
-
     return token_data
 
 
