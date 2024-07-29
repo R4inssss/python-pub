@@ -1,0 +1,13 @@
+name: Build and Deploy code
+
+on: [push, pull_request]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull git repo
+      - uses: actions/checkout@v2
+      - name: say hello R4ins
+      - run: echo "R4ins fastAPI CI/CD pipeline"
+
