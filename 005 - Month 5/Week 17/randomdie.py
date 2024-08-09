@@ -12,7 +12,7 @@ class Dice:
 
 
 
-class RollButton(discord.ui.Button):
+class RollButton(discord.ui.Button ):
     def __init__(self):
         super().__init__(label="Roll Dice", style=discord.ButtonStyle.primary)
 
@@ -23,8 +23,8 @@ class RollButton(discord.ui.Button):
 
 
 class RollView(discord.ui.View):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, timeout=5):
+        super().__init__(timeout=timeout)
         self.add_item(RollButton())
 
 
