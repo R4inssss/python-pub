@@ -1,9 +1,7 @@
 #! python3
 #  guiauto.py - ATBS chapter 20 | Increments i by 1, the values of a and b iterate on it by 100, then we pass it through our moveTo method.
 
-
 import pyautogui
-
 
 
 wh = pyautogui.size()
