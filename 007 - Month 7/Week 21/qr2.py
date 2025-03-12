@@ -3,9 +3,9 @@
 import segno
 
 qrcode = segno.make_qr("""
-DUMBASS""")
+https://www.youtube.com/watch?v=dQw4w9WgXcQ""")
 qrcode.save(
-    "dumb.png",
+    "QR2.png",
     scale=10,
     border=0,
 )
